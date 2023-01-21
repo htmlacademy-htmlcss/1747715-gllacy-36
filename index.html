@@ -163,16 +163,33 @@
           </fieldset>
         </form>
       </section>
-      <section class="delivery_form">
-        <p>Доставка любимого мороженого на дом</p>
-        <p>Хочется полакомиться любимым десертом,  но нет времени съездить в магазин? Закажите доставку мороженого на
+      <section class="delivery">
+        <h2 class="delivery-title">Записаться</h2>
+        <h3 class="delivery-subtitle">Доставка любимого мороженого на дом</h3>
+        <p class="delivery-text">Хочется полакомиться любимым десертом,  но нет времени съездить в магазин? Закажите
+          доставку мороженого на
           дом, и курьер привезёт вам ваш заказ в течение часа!</p>
-        <form action="#" method="post">
-          <p>Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
-          Дата <input type="date" name="date" placeholder="01.04.2020">
-          Телефон <input type="tel" name="tel" placeholder="+7 800 999-00-00">
-          Адрес <input type="address" name="address" placeholder="ул. Большая Конюшенная, 19/8">
-          <button type="submit"></button>
+        <p>Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+
+        <form class="delivery-form" action="#" method="post">
+
+          <p class="delivery-form-date">
+            <label for="delivery-date">Дата</label>
+            <input type="text" name="delivery-date" placeholder="01.04.2020" id="delivery-date">
+          </p>
+
+          <p class="delivery-form-phone">
+            <label for="delivery-phone">Телефон</label>
+            <input type="text" name="delivery-phone" placeholder="+7 800 999-00-00" id="delivery-phone">
+          </p>
+
+
+          <p class="delivery-form-address">
+            <label for="delivery-address">Адрес</label>
+            <input type="text" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" id="delivery-address">
+          </p>
+
+          <button class="button" type="submit">Отправить</button>
         </form>
       </section>
       <section class="contacts">
