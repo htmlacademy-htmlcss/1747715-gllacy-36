@@ -15,7 +15,8 @@
           <li class="navigation-item">
             <a class="navigation-link logo" href="https://htmlacademy.ru/">
               <img src="" alt="Логототип компании">
-            </a></li>
+            </a>
+          </li>
           <li class="navigation-item"><a class="navigation-link" href="#">Каталог</a></li>
           <li class="navigation-item"><a class="navigation-link" href="#">Доставка и оплата</a></li>
           <li class="navigation-item"><a class="navigation-link" href="#">О компании</a></li>
@@ -23,22 +24,57 @@
 
         <ul class="navigation-list navigation-user">
           <li class="navigation-item"><a class="navigation-link" href="tel:+78005558628">+7 800 555-86-28</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#"><span class="visually-hidden">Поиск</span></a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
+          </li>
           <li class="navigation-item"><a class="navigation-link" href="#">Вход</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#"><span class="visually-hidden">Корзина</span></a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#"><span
+                class="visually-hidden">Корзина</span></a></li>
         </ul>
       </nav>
 
     </header>
-    <main>
+    <main class="main-index">
       <h1 class="visully-hidden">Интернет-магазин Глейси</h1>
-      <section class="services">
-        <h2 class="visully-hidden">Услуги</h2>
-        <h3>Нежный пломбир с клубничным джемом</h3>
-        <p>Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для
-          всей семьи. </p>
-        <a href="#">Заказать</a>
-        <img src="" alt="Пломбир с клубничным джемом">
+      <section class="gallery">
+        <h2 class="gallery-title visully-hidden">Галерея</h2>
+
+        <div>
+          <h3>Нежный пломбир с клубничным джемом</h3>
+          <p>Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для
+            всей семьи. </p>
+          <a class="button" href="#">Заказать</a>
+        </div>
+
+        <div>
+
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Предыдущее фото</span>
+          </button>
+          <img src="" alt="Пломбир с клубничным джемом">
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Следующее фото</span>
+          </button>
+
+          <ol class="slider-pagination">
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                <span class="visually-hidden">1 фото</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">2 фото</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">3 фото</span>
+              </button>
+            </li>
+          </ol>
+
+        </div>
+
         <ul>
           <li><a href="#"><img src="" alt="Иконка телеграм"></a></li>
           <li><a href="#"><img src="" alt="Иконка ВК"></a></li>
@@ -59,8 +95,9 @@
           <a href="#">Хочу подарок</a>
         </div>
       </section>
-      <section class="popular_flavors">
-        <p>Попробуйте самые популярные вкусы нашего мороженого</p>
+      <section class="services">
+        <h2 class="visully-hidden">Услуги</h2>
+        <h3>Попробуйте самые популярные вкусы нашего мороженого</h3>
         <div>
           <img src="" alt="Малиновое мороженое">
           <h5>Малинка</h5>
@@ -90,18 +127,21 @@
           <button></button>
         </div>
       </section>
-      <section class="benefits">
-        <h2>Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес
-        </h2>
-        <ul>
-          <li>Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования
+      <section class="advantages">
+        <h2 class="visully-hidden">Преимущества</h2>
+        <h3>Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
+        <ul class="advantages-list">
+          <li class="advantages-item">Всё наше мороженое изготавливается на собственном производстве с использованием
+            современного оборудования
             и проверенных временем технологий.</li>
-          <li>Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты
+          <li class="advantages-item">Для приготовления мороженого используются сливки и молоко высочайшего качества.
+            Все ингредиенты
             и добавки произведены из натурального сырья.</li>
-          <li>Закупка ингредиентов производится только
+          <li class="advantages-item">Закупка ингредиентов производится только
             у проверенных фермерских хозяйств, с которыми
             нас связывает долговременное сотрудничество.</li>
-          <li>Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и
+          <li class="advantages-item">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт
+            мороженому растаять и
             позволяет сохранить превосходный вкус.</li>
         </ul>
       </section>
