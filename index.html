@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главна</title>
+    <title>Главная</title>
   </head>
 
   <body>
@@ -44,18 +44,41 @@
             идеальный десерт для
             всей семьи. </p>
           <a class="gallery-link button" href="#">Заказать</a>
-          <img src="#" alt="Нежный пломбир с клубничным джемом">
         </div>
 
         <div>
-          <button class="slider-button slider-prev" type="button">
-            <span class="visually-hidden">Предыдущее фото</span>
-          </button>
-          <img src="№" alt="Пломбир с клубничным джемом">
-          <button class="slider-button slider-next" type="button">
-            <span class="visually-hidden">Следующее фото</span>
-          </button>
+          <ol class="slider-gallery">
+            <li class="slider-gallery-item slider-gallery-item-active">
+              <button class="slider-gallery-button" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <img class="slider-gallery-image" src="#" alt="Пломбир с клубничным джемом">
+              <button class="slider-gallery-button" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </li>
+            <li class="slider-gallery-item">
+              <button class="slider-gallery-button" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <img class="slider-gallery-image" src="#" alt="Сливочное мороженое со вкусом банана">
+              <button class="slider-gallery-button" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </li>
+            <li class="slider-gallery-item">
+              <button class="slider-gallery-button" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <img class="slider-gallery-image" src="#" alt="Карамельный пломбир с маршмеллоу">
+              <button class="slider-gallery-button" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </li>
+          </ol>
+        </div>
 
+        <div>
           <ol class="slider-pagination">
             <li class="slider-pagination-item">
               <button class="slider-pagination-button slider-pagination-button-current" type="button">
