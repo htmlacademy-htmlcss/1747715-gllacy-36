@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Каталог</title>
   </head>
 
   <body>
@@ -17,7 +17,7 @@
               <img src="#" alt="Логототип компании">
             </a>
           </li>
-          <li class="navigation-item"><a class="navigation-link" href="#">Каталог</a></li>
+          <li class="navigation-item"><a class="navigation-link navigation-link-current" href="#">Каталог</a></li>
           <li class="navigation-item"><a class="navigation-link" href="#">Доставка и оплата</a></li>
           <li class="navigation-item"><a class="navigation-link" href="#">О компании</a></li>
         </ul>
@@ -32,15 +32,112 @@
         </ul>
       </nav>
     </header>
-    <main class="main-catalog">
-      <h1 class="visually-hidden">Каталог</h1>
-      <section class="filter">
-        <h2 class="filter-title visually-hidden">Сливочное мороженое</h2>
-        <p>
-          <a class="filter-link" href="index.html">Главная</a>
-          <a class="filter-link" href="catalog.html">Каталог</a>
-          <a class="filter-link" href="catalog.html">Сливочное мороженое</a>
-        </p>
+    <main class="main-inner">
+      <header class="inner-header">
+        <h1 class="inner-header-title visually-hidden">Каталог</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link">Сливочное мороженое</a>
+          </li>
+        </ul>
+      </header>
+
+      <section class="catalog-products">
+        <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+
+          <label for="select-control">Сортировка</label>
+          <select class="select-control" name="select-control">
+            <label for="select-control">Сортировка</label>
+            <option value="popular">по популярности</option>
+            <option value="cheap">сначала дешёвое</option>
+            <option value="expensive">сначала дорогое</option>
+          </select>
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Жирность</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="fat-content" value="zero-fat-content" >
+
+                  0%
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="fat-content" value="ten-fat-content" checked>
+
+                  до 10%
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="fat-content" value="up-to-thirty-fat-content">
+
+                  до 30%
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="radio" name="fat-content" value="over-thirty-fat-content">
+
+                  выше 30%
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Наполнители</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="chocolate" checked>
+
+                  шоколадные
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="sugar-sprinkles" checked>
+
+                  сахарные посыпки
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="fruit">
+
+                  фрукты
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="syrups">
+
+                  сиропы
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label class="control">
+                  <input class="control-input" type="checkbox" name="jams">
+
+                  джемы
+                </label>
+              </li>
+
+            </ul>
+          </fieldset>
+
+          <button class="button" type="submit">Применить</button>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
