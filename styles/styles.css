@@ -436,6 +436,12 @@ body {
   line-height: inherit;
 }
 
+.catalog-filter-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .button-transparent {
   background: rgba(252, 252, 252, 0.3);
   border: 2px solid #FCFCFC;
