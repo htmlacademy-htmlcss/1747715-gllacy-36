@@ -68,11 +68,11 @@
       </header>
 
       <section class="catalog-filter-products">
-        <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+        <h2 class="catalog-filter-products-title">Сливочное мороженое</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
 
           <label for="select-control">Сортировка</label>
-          <select class="select-control" name="select-control" id="select-control">
+          <select class="select-control translucent-field" name="select-control" id="select-control">
             <option value="popular">по популярности</option>
             <option value="cheap">сначала дешёвое</option>
             <option value="expensive">сначала дорогое</option>
@@ -80,7 +80,7 @@
 
           <div class="catalog-filter-group">
             <h3 class="catalog-filter-title">Жирность</h3>
-            <ul class="catalog-filter-list">
+            <ul class="catalog-filter-list translucent-field">
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="fat-content" value="zero-fat-content" >
@@ -114,7 +114,7 @@
 
           <div class="catalog-filter-group">
             <h3 class="catalog-filter-title">Наполнители</h3>
-            <ul class="catalog-filter-list">
+            <ul class="catalog-filter-list translucent-field">
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="chocolate" checked>
@@ -154,12 +154,12 @@
             </ul>
           </div>
 
-          <button class="button" type="submit">Применить</button>
+          <button class="button button-transparent" type="submit">Применить</button>
         </form>
       </section>
 
       <section class="catalog">
-        <h2 class="catalog-title">Попробуйте самые популярные вкусы нашего мороженого</h2>
+        <h2 class="catalog-title visually-hidden">Каталог сливочного мороженого.</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
             <img src="images/raspberry-catalog-photo.jpg" alt="Малиновое мороженое." width="168" height="168">
@@ -247,7 +247,7 @@
           </li>
         </ul>
 
-        <a class="button pagination-show-more" href="#">Показать ещё</a>
+        <a class="button button-white pagination-show-more" href="#">Показать ещё</a>
 
         <ul class="pagination">
           <li class="pagination-item">
@@ -255,7 +255,7 @@
               <span class="visually-hidden">Предыдущая страница.</span>
             </a>
           </li>
-          <li class="pagination-item">
+          <li class="pagination-item pagination-item-current">
             <a class="pagination-link pagination-current">1</a>
           </li>
           <li class="pagination-item">
@@ -304,7 +304,7 @@
       </div>
 
       <div class="page-footer-info">
-        <h2 class="page-footer-title">Для поставщиков</h2>
+        <h2 class="page-footer-title visually-hidden">Для поставщиков</h2>
         <ul class="footer-info-list">
           <li class="footer-info-item"><a class="footer-info-link" href="#">О производстве</a></li>
           <li class="footer-info-item"><a class="footer-info-link" href="#">Наши документы</a></li>
@@ -313,12 +313,13 @@
       </div>
 
       <div class="page-footer-logo">
-        <h2 class="page-footer-title visully-hidden">Логотип</h2>
+        <h2 class="page-footer-title visually-hidden">Логотип</h2>
         <a href="https://htmlacademy.ru/" class="footer-logo-link logo">
-          <img class="footer-logo" src="images/logo_htmlacademy.svg" alt="Логотип htmlacademy." width="93" height="26.71">
+          <img class="footer-logo" src="images/logo_htmlacademy.svg" alt="Логотип htmlacademy." width="93"
+            height="26.71">
         </a>
-        <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy &copy;
-            2021</a></p>
+        <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a> &copy;
+            2021</p>
       </div>
     </footer>
   </body>
