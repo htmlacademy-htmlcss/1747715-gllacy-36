@@ -98,7 +98,8 @@ body {
   font-size: 14px;
 }
 
-.navigation-user .navigation-item:first-child {
+.navigation-item .navigation-phone {
+  font-size: inherit;
   font-weight: 700;
 }
 
@@ -227,6 +228,22 @@ body {
   color: #565C66;
 }
 
+.advantages-item:first-child {
+  list-style: url(../images/list-style-icecream.svg);
+}
+
+.advantages-item:nth-child(2) {
+  list-style: url(../images/list-style-leaf.svg);
+}
+
+.advantages-item:nth-child(3) {
+  list-style: url(../images/list-style-cow.svg);
+}
+
+.advantages-item:nth-child(4) {
+  list-style: url(../images/list-style-thermometer.svg);
+}
+
 /* Стили для blog */
 
 .blog {
@@ -259,6 +276,7 @@ body {
   font-family: inherit;
   font-size: inherit;
   line-height: 20px;
+  color: #B9B9B9;
 }
 
 .newletter-text {
@@ -297,6 +315,7 @@ body {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  color: #B9B9B9;
 }
 
 .delivery-form-text {
@@ -396,7 +415,7 @@ body {
 
 .translucent-field {
   background: #FCFCFC;
-  /*opacity: 0.3;*/
+  /*opacity: 0.3; пока не разобралась как сделать текст непрозрачным*/
   border-radius: 20px;
 }
 
