@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -14,65 +15,89 @@
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link logo" href="index.html">
-              <img src="images/logo.svg" alt="Логототип компании." width="137" height="55.72">
+              <img src="images/logo.svg" alt="Логототип компании." width="137" height="56">
             </a>
           </li>
-          <li class="navigation-item"><a class="navigation-link" href="catalog.html">Каталог</a></li>
+          <li class="navigation-item"><a class="navigation-link navigation-link-current" href="catalog.html">Каталог</a>
+            <ul class="drop-down-menu-list visually-hidden">
+              <li class="drop-down-menu-item">
+                <a class="drop-down-menu-link drop-down-menu-link-current" href="#">Новинки</a>
+              </li>
+              <li class="drop-down-menu-item">
+                <a class="drop-down-menu-link" href="#">Сливочное</a>
+              </li>
+              <li class="drop-down-menu-item">
+                <a class="drop-down-menu-link" href="#">Щербеты</a>
+              </li>
+              <li class="drop-down-menu-item">
+                <a class="drop-down-menu-link" href="#">Фруктовый лед</a>
+              </li>
+              <li class="drop-down-menu-item">
+                <a class="drop-down-menu-link" href="#">Мелорин</a>
+              </li>
+            </ul>
+          </li>
           <li class="navigation-item"><a class="navigation-link" href="#">Доставка и оплата</a></li>
           <li class="navigation-item"><a class="navigation-link" href="#">О компании</a></li>
         </ul>
 
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item"><a class="navigation-link" href="tel:+78005558628">+7 800 555-86-28</a></li>
+          <li class="navigation-item"><a class="navigation-link navigation-phone" href="tel:+78005558628">+7 800 555-86-28</a></li>
           <li class="navigation-item"><a class="navigation-link" href="#"><span
                 class="visually-hidden">Поиск.</span></a>
           </li>
           <li class="navigation-item"><a class="navigation-link" href="#">Вход</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#"><span
-                class="visually-hidden">Корзина.</span></a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#">2 товара</a></li>
         </ul>
       </nav>
 
     </header>
+
     <main class="main-index">
       <h1 class="visually-hidden">Интернет-магазин Глейси</h1>
       <section class="gallery">
-        <h2 class="gallery-title visully-hidden">Галерея</h2>
+        <h2 class="gallery-title visually-hidden">Галерея</h2>
 
         <div>
           <ol class="slider-gallery">
             <li class="slider-gallery-item slider-gallery-item-active">
-              <h3 class="gallety-subtitle">Нежный пломбир с клубничным джемом</h3>
-              <p class="gallery-text">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-              <a class="gallery-link button" href="#">Заказать</a>
+              <h3 class="gallery-subtitle">Нежный пломбир с клубничным джемом</h3>
+              <p class="gallery-text">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом –
+                это идеальный десерт для всей семьи.</p>
+              <a class="gallery-link button button-white" href="#">Заказать</a>
               <button class="slider-gallery-button" type="button">
                 <span class="visually-hidden">Предыдущее фото.</span>
               </button>
-              <img class="slider-gallery-image" src="images/big-ice-cream.png" alt="Пломбир с клубничным джемом." width="327.15" height="507">
+              <img class="slider-gallery-image" src="images/big-ice-cream.png" alt="Пломбир с клубничным джемом."
+                width="327" height="507">
               <button class="slider-gallery-button" type="button">
                 <span class="visually-hidden">Следующее фото.</span>
               </button>
             </li>
             <li class="slider-gallery-item">
-              <h3 class="gallety-subtitle">Сливочное мороженое со вкусом банана</h3>
-              <p class="gallery-text">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
-              <a class="gallery-link button" href="#">Заказать</a>
+              <h3 class="gallery-subtitle">Сливочное мороженое со вкусом банана</h3>
+              <p class="gallery-text">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение
+                даже в самый жаркий летний день.</p>
+              <a class="gallery-link button button-white" href="#">Заказать</a>
               <button class="slider-gallery-button" type="button">
                 <span class="visually-hidden">Предыдущее фото.</span>
               </button>
-              <img class="slider-gallery-image" src="images/big-banana-icecream.png" alt="Сливочное мороженое со вкусом банана." width="312" height="507">
+              <img class="slider-gallery-image" src="images/big-banana-icecream.png"
+                alt="Сливочное мороженое со вкусом банана." width="312" height="507">
               <button class="slider-gallery-button" type="button">
                 <span class="visually-hidden">Следующее фото.</span>
               </button>
             </li>
             <li class="slider-gallery-item">
-              <h3 class="gallety-subtitle">Карамельный пломбир с маршмеллоу</h3>
-              <p class="gallery-text">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
-              <a class="gallery-link button" href="#">Заказать</a>
+              <h3 class="gallery-subtitle">Карамельный пломбир с маршмеллоу</h3>
+              <p class="gallery-text">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца
+                сладкоежек всех возрастов.</p>
+              <a class="gallery-link button button-white" href="#">Заказать</a>
               <button class="slider-gallery-button" type="button">
                 <span class="visually-hidden">Предыдущее фото.</span>
               </button>
-              <img class="slider-gallery-image" src="images/big-caramel-icecream.png" alt="Карамельный пломбир с маршмеллоу." width="350" height="507">
+              <img class="slider-gallery-image" src="images/big-caramel-icecream.png"
+                alt="Карамельный пломбир с маршмеллоу." width="350" height="507">
               <button class="slider-gallery-button" type="button">
                 <span class="visually-hidden">Следующее фото.</span>
               </button>
@@ -120,17 +145,17 @@
       </section>
       <section class="gifts">
         <h2 class="gifts-title">Заказывайте мороженое и получайте подарки!</h2>
-        <div>
+        <div class="gifts-content">
           <h3 class="gifts-subtitle">Малинка даром!</h3>
           <p class="gifts-text">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового
             варенья бесплатно.</p>
-          <a class="gifts-link" href="#">Хочу подарок</a>
+          <a class="gifts-link button button-white" href="#">Хочу подарок</a>
         </div>
-        <div>
+        <div class="gifts-content">
           <h3 class="gifts-subtitle">Маршмеллоу даром!</h3>
           <p class="gifts-text">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно
             бесплатно.</p>
-          <a class="gifts-link" href="#">Хочу подарок</a>
+          <a class="gifts-link button button-white" href="#">Хочу подарок</a>
         </div>
       </section>
       <section class="catalog">
@@ -196,7 +221,7 @@
           Честно =)</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="email" name="email" placeholder="email@example.com">
-          <button class="button" type="submit">Отправить</button>
+          <button class="button button-pink" type="submit">Отправить</button>
         </form>
       </section>
       <section class="delivery">
@@ -221,20 +246,24 @@
               <input type="text" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8"
                 id="delivery-address">
             </p>
-            <button class="button" type="submit">Отправить</button>
+            <button class="button button-pink" type="submit">Отправить</button>
           </form>
         </div>
       </section>
       <section class="contacts">
-        <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts-subtitle">Адрес главного офиса и офлайн-магазина:</p>
-        <address class="contacts-address">
-          <p class="contacts-address-text">наб. реки Карповки, 5 лит П, Санкт-Петербург</p>
-          <p class="contacts-subtitle">Для заказов по телефону:</p>
-          <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          <span class="contacts-schedule">(с 10 до 20 ежедневно)</span>
-        </address>
-        <a class="button button-feedback" href="#">Форма обратной связи</a>
+
+        <div class="contacts-content">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p class="contacts-subtitle">Адрес главного офиса и офлайн-магазина:</p>
+          <address class="contacts-address">
+            <p class="contacts-address-text">наб. реки Карповки, 5 лит П, Санкт-Петербург</p>
+            <p class="contacts-subtitle">Для заказов по телефону:</p>
+            <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <span class="contacts-schedule">(с 10 до 20 ежедневно)</span>
+          </address>
+          <a class="button button-feedback button-pink" href="#">Форма обратной связи</a>
+        </div>
+
       </section>
     </main>
     <footer class="page-footer">
@@ -261,7 +290,7 @@
       </div>
 
       <div class="page-footer-info">
-        <h2 class="page-footer-title">Для поставщиков</h2>
+        <h2 class="page-footer-title visually-hidden">Для поставщиков</h2>
         <ul class="footer-info-list">
           <li class="footer-info-item"><a class="footer-info-link" href="#">О производстве</a></li>
           <li class="footer-info-item"><a class="footer-info-link" href="#">Наши документы</a></li>
@@ -270,12 +299,13 @@
       </div>
 
       <div class="page-footer-logo">
-        <h2 class="page-footer-title visully-hidden">Логотип</h2>
+        <h2 class="page-footer-title visually-hidden">Логотип</h2>
         <a href="https://htmlacademy.ru/" class="footer-logo-link logo">
-          <img class="footer-logo" src="images/logo_htmlacademy.svg" alt="Логотип htmlacademy." width="93" height="26.71">
+          <img class="footer-logo" src="images/logo_htmlacademy.svg" alt="Логотип htmlacademy." width="93"
+            height="27">
         </a>
-        <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy &copy;
-            2021</a></p>
+        <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a> &copy;
+            2021</p>
       </div>
     </footer>
   </body>

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -14,10 +15,10 @@
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link logo" href="index.html">
-              <img src="images/logo.svg" alt="Логототип компании." width="137" height="55.72">
+              <img src="images/logo.svg" alt="Логототип компании." width="137" height="56">
             </a>
           </li>
-          <li class="navigation-item"><a class="navigation-link navigation-link-current">Каталог</a>
+          <li class="navigation-item"><a class="navigation-link navigation-link-current" href="catalog.html">Каталог</a>
             <ul class="drop-down-menu-list">
               <li class="drop-down-menu-item">
                 <a class="drop-down-menu-link drop-down-menu-link-current" href="#">Новинки</a>
@@ -41,14 +42,15 @@
         </ul>
 
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item"><a class="navigation-link" href="tel:+78005558628">+7 800 555-86-28</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#"><span class="visually-hidden">Поиск.</span></a>
+          <li class="navigation-item"><a class="navigation-link navigation-phone" href="tel:+78005558628">+7 800 555-86-28</a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#"><span
+                class="visually-hidden">Поиск.</span></a>
           </li>
           <li class="navigation-item"><a class="navigation-link" href="#">Вход</a></li>
-          <li class="navigation-item"><a class="navigation-link" href="#"><span
-                class="visually-hidden">Корзина.</span></a></li>
+          <li class="navigation-item"><a class="navigation-link" href="#">2 товара</a></li>
         </ul>
       </nav>
+
     </header>
     <main class="main-inner">
       <header class="inner-header">
@@ -67,19 +69,19 @@
       </header>
 
       <section class="catalog-filter-products">
-        <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+        <h2 class="catalog-filter-products-title">Сливочное мороженое</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
 
-          <label for="select-control">Сортировка</label>
-          <select class="select-control" name="select-control" id="select-control">
+          <label for="select-control">Сортировка:</label>
+          <select class="select-control translucent-field" name="select-control" id="select-control">
             <option value="popular">по популярности</option>
             <option value="cheap">сначала дешёвое</option>
             <option value="expensive">сначала дорогое</option>
           </select>
 
           <div class="catalog-filter-group">
-            <h3 class="catalog-filter-title">Жирность</h3>
-            <ul class="catalog-filter-list">
+            <h3 class="catalog-filter-title">Жирность:</h3>
+            <ul class="catalog-filter-list translucent-field">
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="fat-content" value="zero-fat-content" >
@@ -112,8 +114,8 @@
           </div>
 
           <div class="catalog-filter-group">
-            <h3 class="catalog-filter-title">Наполнители</h3>
-            <ul class="catalog-filter-list">
+            <h3 class="catalog-filter-title">Наполнители:</h3>
+            <ul class="catalog-filter-list translucent-field">
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="chocolate" checked>
@@ -153,12 +155,12 @@
             </ul>
           </div>
 
-          <button class="button" type="submit">Применить</button>
+          <button class="button button-transparent" type="submit">Применить</button>
         </form>
       </section>
 
       <section class="catalog">
-        <h2 class="catalog-title">Попробуйте самые популярные вкусы нашего мороженого</h2>
+        <h2 class="catalog-title visually-hidden">Каталог сливочного мороженого.</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
             <img src="images/raspberry-catalog-photo.jpg" alt="Малиновое мороженое." width="168" height="168">
@@ -246,7 +248,7 @@
           </li>
         </ul>
 
-        <a class="button pagination-show-more" href="#">Показать ещё</a>
+        <a class="button button-white pagination-show-more" href="#">Показать ещё</a>
 
         <ul class="pagination">
           <li class="pagination-item">
@@ -254,7 +256,7 @@
               <span class="visually-hidden">Предыдущая страница.</span>
             </a>
           </li>
-          <li class="pagination-item">
+          <li class="pagination-item pagination-item-current">
             <a class="pagination-link pagination-current">1</a>
           </li>
           <li class="pagination-item">
@@ -303,7 +305,7 @@
       </div>
 
       <div class="page-footer-info">
-        <h2 class="page-footer-title">Для поставщиков</h2>
+        <h2 class="page-footer-title visually-hidden">Для поставщиков</h2>
         <ul class="footer-info-list">
           <li class="footer-info-item"><a class="footer-info-link" href="#">О производстве</a></li>
           <li class="footer-info-item"><a class="footer-info-link" href="#">Наши документы</a></li>
@@ -312,12 +314,13 @@
       </div>
 
       <div class="page-footer-logo">
-        <h2 class="page-footer-title visully-hidden">Логотип</h2>
+        <h2 class="page-footer-title visually-hidden">Логотип</h2>
         <a href="https://htmlacademy.ru/" class="footer-logo-link logo">
-          <img class="footer-logo" src="images/logo_htmlacademy.svg" alt="Логотип htmlacademy." width="93" height="26.71">
+          <img class="footer-logo" src="images/logo_htmlacademy.svg" alt="Логотип htmlacademy." width="93"
+            height="27">
         </a>
-        <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy &copy;
-            2021</a></p>
+        <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a> &copy;
+            2021</p>
       </div>
     </footer>
   </body>
