@@ -198,6 +198,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: right;
   width: 570px;
+  height: 268px;
 }
 
 .gifts-content:last-child {
@@ -288,11 +289,11 @@ body {
 }
 
 .advantages-item:nth-child(2) {
-  list-style: url(../images/list-style-leaf.svg);
+  list-style: url(../images/list-style-cow.svg);
 }
 
 .advantages-item:nth-child(3) {
-  list-style: url(../images/list-style-cow.svg);
+  list-style: url(../images/list-style-leaf.svg);
 }
 
 .advantages-item:nth-child(4) {
@@ -301,9 +302,18 @@ body {
 
 /* Стили для blog */
 
+.aside-container {
+  display: flex;
+  gap: 30px;
+}
+
 .blog {
   background-color: #FFFFFF;
   background-image: url(../images/rasperry-and-mint.png);
+  background-size: 100%;
+  width: 570px;
+  height: 224px;
+  border-radius: 16px;
 }
 
 .blog-title {
@@ -325,6 +335,9 @@ body {
 
 .newsletter {
   background-color: #FFFFFF;
+  width: 570px;
+  height: 224px;
+  border-radius: 16px;
 }
 
 .newsletter input {
@@ -342,7 +355,18 @@ body {
 
 .delivery {
   background-color: #FFFFFF;
+  background-image: url(../images/icecream-and-fruit.jpg);
+  background-position: right;
   border-radius: 16px;
+  height: 534px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.delivery-container {
+  width: 371px;
+  height: 204px;
 }
 
 .delivery-title {
@@ -359,6 +383,8 @@ body {
   background: #FCFCFC;
   box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
+  width: 500px;
+  height: 406px;
 }
 
 .delivery-form {
@@ -380,16 +406,25 @@ body {
 /* Стили для contacts */
 
 .contacts {
+  width: 1170px;
+  height: 492px;
   background-color: #FEAFC3;
   background-image: url(../images/three-icecreams.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
+  border-radius: 16px;
+
 }
 
 .contacts-content {
+  width: 343px;
+  height: 364px;
   background: #FCFCFC;
   box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
+  position: relative;
+  left: 64px;
+  top: 64px;
 }
 
 .contacts-subtitle {
@@ -421,6 +456,11 @@ body {
 }
 
 /* Стили для footer */
+
+.page-footer-container {
+  display: flex;
+  justify-content: space-between;
+}
 
 .footer-info-link {
   text-decoration: none;
