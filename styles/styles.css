@@ -27,6 +27,9 @@ html {
 
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -124,6 +127,10 @@ body {
 }
 
 /* Стили для main */
+
+.main-container {
+  flex-grow: 1;
+}
 
 /* Стили для gallery */
 
