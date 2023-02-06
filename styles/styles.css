@@ -150,6 +150,16 @@ body {
   list-style: none;
 }
 
+.slider-gallery-container {
+  width: 470px;
+}
+
+.slider-gallery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .gallery-subtitle {
   font-weight: 900;
   font-size: 36px;
@@ -175,12 +185,19 @@ body {
   line-height: 46px;
 }
 
+.gifts-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .gifts-content {
   background: #FF7799;
   border-radius: 16px;
   background-image: url(../images/raspberry.png);
   background-repeat: no-repeat;
   background-position-x: right;
+  width: 570px;
 }
 
 .gifts-content:last-child {
@@ -208,10 +225,17 @@ body {
   line-height: 46px;
 }
 
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .catalog-item {
   display: block;
   background: #FCFCFC;
   border-radius: 8px;
+  width: 270px;
 }
 
 .catalog-item img {
@@ -248,8 +272,15 @@ body {
   text-align: center;
 }
 
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .advantages-item {
   color: #565C66;
+  width: 500px;
 }
 
 .advantages-item:first-child {
