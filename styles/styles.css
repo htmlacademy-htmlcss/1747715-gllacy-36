@@ -58,11 +58,7 @@ body {
 .catalog-list,
 .slider-pagination,
 .social-list,
-.footer-info-list,
-.drop-down-menu-list,
-.breadcrumbs,
-.catalog-filter-list,
-.pagination {
+.drop-down-menu-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -261,7 +257,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 107px;
 }
 
 .catalog-item {
@@ -296,7 +291,6 @@ body {
 .advantages {
   background: #FFFFFF;
   border-radius: 16px;
-  margin-top: 80px;
 }
 
 .advantages-title {
@@ -338,7 +332,6 @@ body {
 .aside-container {
   display: flex;
   gap: 30px;
-  margin-top: 80px;
 }
 
 .blog {
@@ -495,6 +488,18 @@ body {
 .page-footer-container {
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid rgba(252, 252, 252, 0.3);
+}
+
+.footer-info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 356px;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .footer-info-link {
@@ -521,9 +526,17 @@ body {
 /* Стили для страницы Каталога */
 
 .breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
+  display: flex;
+}
+
+.breadcrumbs-item {
+  margin-right: 8px;
 }
 
 .breadcrumbs-item:last-child {
@@ -532,10 +545,12 @@ body {
 
 .breadcrumbs-item::after {
   content: url(../images/two-arrows-right.svg);
+  padding-left: 8px;
 }
 
 .breadcrumbs-item:last-child::after {
   content: none;
+  margin-right: 0;
 }
 
 .breadcrumbs-link {
@@ -547,6 +562,13 @@ body {
   background: #FCFCFC;
   /*opacity: 0.3; пока не разобралась как сделать текст непрозрачным*/
   border-radius: 20px;
+}
+
+.catalog-filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .catalog-filter-products {
@@ -577,6 +599,17 @@ body {
   border: 2px solid #FCFCFC;
   border-radius: 20px;
   font-weight: 700;
+}
+
+.pagination-wrapper {
+  display: flex;
+}
+
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .pagination-link {
