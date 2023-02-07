@@ -55,8 +55,6 @@ body {
   margin: 0 auto;
 }
 
-.navigation-list,
-.slider-gallery,
 .catalog-list,
 .slider-pagination,
 .social-list,
@@ -107,11 +105,28 @@ body {
   line-height: 20px;
 }
 
+.navigation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 32px
+}
+
+.navigation-list:first-child .navigation-item:nth-child(2)::after {
+  content: url(../images/Arrow-down.svg);
+}
+
 .navigation-link {
   line-height: inherit;
   color: inherit;
   text-decoration: none;
   text-align: center;
+}
+
+.navigation-user {
+  gap: 16px;
 }
 
 .navigation-user .navigation-link {
@@ -121,6 +136,11 @@ body {
 .navigation-item .navigation-phone {
   font-size: inherit;
   font-weight: 700;
+}
+
+.navigation-user a:not(.navigation-phone) {
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 30px;
 }
 
 .drop-down-menu-list {
@@ -148,6 +168,8 @@ body {
 
 .slider-gallery {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .slider-gallery-container {
@@ -178,6 +200,10 @@ body {
 
 /* Стили для gifts */
 
+.gifts {
+  margin-top: 80px;
+}
+
 .gifts-title {
   text-align: center;
   font-weight: 900;
@@ -189,6 +215,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 55px;
 }
 
 .gifts-content {
@@ -219,6 +246,10 @@ body {
 
 /* Стили для catalog */
 
+.catalog {
+  margin-top: 80px;
+}
+
 .catalog-subtitle {
   text-align: center;
   font-weight: 900;
@@ -230,6 +261,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 107px;
 }
 
 .catalog-item {
@@ -264,6 +296,7 @@ body {
 .advantages {
   background: #FFFFFF;
   border-radius: 16px;
+  margin-top: 80px;
 }
 
 .advantages-title {
@@ -305,6 +338,7 @@ body {
 .aside-container {
   display: flex;
   gap: 30px;
+  margin-top: 80px;
 }
 
 .blog {
@@ -362,6 +396,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 80px;
 }
 
 .delivery-container {
@@ -413,7 +448,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 16px;
-
+  margin-top: 80px;
 }
 
 .contacts-content {
