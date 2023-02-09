@@ -68,6 +68,7 @@ body {
   font-size: inherit;
   line-height: inherit;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .button-white {
@@ -187,9 +188,13 @@ body {
   width: 429px;
 }
 
+.slider-wrapper {
+  display: flex;
+}
+
+
 .slider-gallery-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -207,6 +212,13 @@ body {
 .gallery-link {
   line-height: 20px;
   font-weight: 700;
+}
+
+.slider-gallery-button {
+  border: none;
+  background: none;
+  border-radius: 26px;
+  cursor: pointer;
 }
 
 .social-list {
@@ -377,7 +389,9 @@ body {
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  ;
+  margin-left: 40px;
 }
 
 .advantages-item {
@@ -413,8 +427,8 @@ body {
   background-image: url(../images/rasperry-and-mint.png);
   background-size: 100%;
   width: 570px;
-  height: 224px;
   border-radius: 16px;
+  padding: 32px 0 0 32px;
 }
 
 .blog-title {
@@ -422,6 +436,7 @@ body {
   font-weight: 400;
   line-height: 20px;
   color: #565C66;
+  margin: 0;
 }
 
 .blog-link {
@@ -439,6 +454,11 @@ body {
   width: 570px;
   height: 224px;
   border-radius: 16px;
+  padding: 26px;
+}
+
+.newsletter-form input {
+  margin-right: 24px;
 }
 
 .newsletter input {
@@ -450,6 +470,7 @@ body {
 
 .newletter-text {
   color: #565C66;
+  margin: 0;
 }
 
 /* Стили для delivery */
@@ -485,8 +506,9 @@ body {
   background: #FCFCFC;
   box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
-  width: 500px;
+  max-width: 500px;
   height: 406px;
+  padding: 40px 40px 0;
 }
 
 .delivery-form {
@@ -501,8 +523,41 @@ body {
   color: #B9B9B9;
 }
 
+.delivery-form-date input {
+  width: 117px;
+}
+
+.delivery-form-phone input {
+  width: 287px;
+}
+
 .delivery-form-text {
   color: #565C66;
+  margin: 0;
+  width: 380px;
+}
+
+.delivery-form-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-form div {
+  display: flex;
+  gap: 16px;
+}
+
+.input {
+  height: 48px;
+}
+
+.delivery-form-container label:after {
+  content: url(../images/Info.svg);
+  padding-left: 6px;
+}
+
+.delivery-form-phone label::after {
+  content: none;
 }
 
 /* Стили для contacts */
@@ -519,7 +574,6 @@ body {
 }
 
 .contacts-content {
-  width: 343px;
   height: 364px;
   background: #FCFCFC;
   box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
@@ -527,10 +581,21 @@ body {
   position: relative;
   left: 64px;
   top: 64px;
+  padding-left: 40px;
+  width: 303px;
 }
 
 .contacts-subtitle {
   color: #565C66;
+  width: 179px;
+}
+
+.contacts-subtitle:nth-child(2) {
+  width: 203px;
+}
+
+.phone-schedule-inner {
+  width: 200px;
 }
 
 .contacts-address-text {
@@ -539,8 +604,10 @@ body {
   line-height: 24px;
 }
 
+
 .contacts-address {
   font-style: normal;
+  max-width: 263px
 }
 
 .contacts-phone {
