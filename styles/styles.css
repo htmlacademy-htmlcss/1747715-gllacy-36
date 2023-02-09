@@ -186,7 +186,7 @@ padding-right: 8px;
 }
 
 .slider-gallery-container {
-  width: 470px;
+  width:429px;
 }
 
 .slider-gallery-item {
@@ -243,6 +243,11 @@ padding-right: 8px;
 
 .gifts-content:last-child {
   background-image: url(../images/marshmallow.png);
+}
+
+.gifts-wrapper {
+  width: 317px;
+  margin-left: 36px;
 }
 
 .gifts-subtitle {
