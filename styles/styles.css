@@ -77,16 +77,17 @@ body {
   box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #2D3440;
+  padding: 12px 32px;
 }
 
 .button-pink {
-  font-weight: 700;
   line-height: 20px;
   background: #FF2F64;
   border: 4px solid rgba(255, 47, 100, 0.3);
   box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #FCFCFC;
+  padding: 12px 32px;
 }
 
 /* Стили для header */
@@ -700,8 +701,7 @@ body {
 }
 
 .translucent-field {
-  background: #FCFCFC;
-  /*opacity: 0.3; пока не разобралась как сделать текст непрозрачным*/
+  background-color: rgba(252, 252, 252, 0.3);
   border-radius: 20px;
 }
 
@@ -710,6 +710,21 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+}
+
+.catalog-filter-list-fat {
+  width: 383px;
+  display: flex;
+  gap: 16px;
+  padding: 8px 24px;
+
+}
+
+.catalog-filter-list-filler {
+  width: 604px;
+  display: flex;
+  gap: 16px;
+  padding: 10px 24px;
 }
 
 .catalog-filter-products {
@@ -727,6 +742,8 @@ body {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border: none;
+  width: 196px;
 }
 
 .catalog-filter-title {
@@ -740,6 +757,7 @@ body {
   border: 2px solid #FCFCFC;
   border-radius: 20px;
   font-weight: 700;
+  padding: 8px 52px;
 }
 
 .pagination-wrapper {
