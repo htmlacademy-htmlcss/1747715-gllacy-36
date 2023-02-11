@@ -21,7 +21,15 @@
   font-style: normal;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -42,17 +50,16 @@ body {
   overflow: hidden;
 }
 
-.navigation-list,
-.slider-gallery,
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
 .catalog-list,
-.slider-pagination,
-.social-list,
-.footer-info-list,
-.drop-down-menu-list,
-.breadcrumbs,
-.catalog-filter-list,
-.pagination {
+.drop-down-menu-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .button {
@@ -61,6 +68,7 @@ body {
   font-size: inherit;
   line-height: inherit;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .button-white {
@@ -69,22 +77,41 @@ body {
   box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #2D3440;
+  padding: 12px 32px;
 }
 
 .button-pink {
-  font-weight: 700;
   line-height: 20px;
   background: #FF2F64;
   border: 4px solid rgba(255, 47, 100, 0.3);
   box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #FCFCFC;
+  padding: 12px 32px;
 }
 
 /* Стили для header */
 
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
 .page-header {
   line-height: 20px;
+}
+
+.navigation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 32px
+}
+
+.navigation-list:first-child .navigation-item:nth-child(2)::after {
+  content: url(../images/Arrow-down.svg);
 }
 
 .navigation-link {
@@ -94,13 +121,39 @@ body {
   text-align: center;
 }
 
+.navigation-link svg:not(.navigation-search) {
+  padding-right: 8px;
+}
+
+.navigation-user {
+  gap: 16px;
+}
+
 .navigation-user .navigation-link {
   font-size: 14px;
+  display: flex;
 }
 
 .navigation-item .navigation-phone {
   font-size: inherit;
   font-weight: 700;
+}
+
+.navigation-user a:not(.navigation-phone) {
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 30px;
+}
+
+.navigation-user .navigation-item:nth-child(2) a {
+  padding: 9px;
+}
+
+.navigation-user .navigation-item:nth-child(3) a {
+  padding: 9px 16px 9px 17px;
+}
+
+.navigation-user .navigation-item:nth-child(4) a {
+  padding: 8px 16px;
 }
 
 .drop-down-menu-list {
@@ -120,10 +173,30 @@ body {
 
 /* Стили для main */
 
+.main-container {
+  flex-grow: 1;
+}
+
 /* Стили для gallery */
 
 .slider-gallery {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-gallery-container {
+  width: 429px;
+}
+
+.slider-wrapper {
+  display: flex;
+}
+
+
+.slider-gallery-item {
+  display: flex;
+  align-items: center;
 }
 
 .gallery-subtitle {
@@ -142,7 +215,50 @@ body {
   font-weight: 700;
 }
 
+.slider-gallery-button {
+  border: none;
+  background: none;
+  border-radius: 26px;
+  cursor: pointer;
+}
+
+.social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.slider-pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.slider-pagination-button {
+  border: none;
+  background: rgba(252, 252, 252, 0.3);
+  padding: 6px;
+  border-radius: 100px;
+}
+
+.slider-pagination-button-current {
+  background: #FCFCFC;
+}
+
+.lists-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Стили для gifts */
+
+.gifts {
+  margin-top: 80px;
+}
 
 .gifts-title {
   text-align: center;
@@ -151,16 +267,30 @@ body {
   line-height: 46px;
 }
 
+.gifts-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 55px;
+}
+
 .gifts-content {
   background: #FF7799;
   border-radius: 16px;
   background-image: url(../images/raspberry.png);
   background-repeat: no-repeat;
   background-position-x: right;
+  width: 570px;
+  height: 268px;
 }
 
 .gifts-content:last-child {
   background-image: url(../images/marshmallow.png);
+}
+
+.gifts-wrapper {
+  width: 317px;
+  margin-left: 36px;
 }
 
 .gifts-subtitle {
@@ -177,6 +307,10 @@ body {
 
 /* Стили для catalog */
 
+.catalog {
+  margin-top: 80px;
+}
+
 .catalog-subtitle {
   text-align: center;
   font-weight: 900;
@@ -184,10 +318,18 @@ body {
   line-height: 46px;
 }
 
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .catalog-item {
   display: block;
   background: #FCFCFC;
   border-radius: 8px;
+  width: 270px;
+  text-align: center;
 }
 
 .catalog-item img {
@@ -202,12 +344,33 @@ body {
 
 .catalog-item-text {
   color: #565C66;
+  display: block;
+  max-width: 190px;
+  margin: 0 auto;
 }
 
 .catalog-item-price {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  display: block;
+  text-align: start;
+}
+
+.catalog-item .button {
+  background: #FF2F64;
+  border: 2px solid #FF2F64;
+  border-radius: 26px;
+  padding: 8px;
+  display: flex;
+}
+
+.price-and-cart-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  max-width: 190px;
+  margin: 0 auto;
 }
 
 /* Стили для advantages */
@@ -224,8 +387,17 @@ body {
   text-align: center;
 }
 
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  ;
+  margin-left: 40px;
+}
+
 .advantages-item {
   color: #565C66;
+  width: 500px;
 }
 
 .advantages-item:first-child {
@@ -233,11 +405,11 @@ body {
 }
 
 .advantages-item:nth-child(2) {
-  list-style: url(../images/list-style-leaf.svg);
+  list-style: url(../images/list-style-cow.svg);
 }
 
 .advantages-item:nth-child(3) {
-  list-style: url(../images/list-style-cow.svg);
+  list-style: url(../images/list-style-leaf.svg);
 }
 
 .advantages-item:nth-child(4) {
@@ -246,9 +418,18 @@ body {
 
 /* Стили для blog */
 
+.aside-container {
+  display: flex;
+  gap: 30px;
+}
+
 .blog {
   background-color: #FFFFFF;
   background-image: url(../images/rasperry-and-mint.png);
+  background-size: 100%;
+  width: 570px;
+  border-radius: 16px;
+  padding: 32px 0 0 32px;
 }
 
 .blog-title {
@@ -256,6 +437,7 @@ body {
   font-weight: 400;
   line-height: 20px;
   color: #565C66;
+  margin: 0;
 }
 
 .blog-link {
@@ -270,6 +452,14 @@ body {
 
 .newsletter {
   background-color: #FFFFFF;
+  width: 570px;
+  height: 224px;
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.newsletter-form input {
+  margin-right: 24px;
 }
 
 .newsletter input {
@@ -281,13 +471,26 @@ body {
 
 .newletter-text {
   color: #565C66;
+  margin: 0;
 }
 
 /* Стили для delivery */
 
 .delivery {
   background-color: #FFFFFF;
+  background-image: url(../images/icecream-and-fruit.jpg);
+  background-position: right;
   border-radius: 16px;
+  height: 534px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.delivery-container {
+  width: 371px;
+  height: 204px;
 }
 
 .delivery-title {
@@ -304,6 +507,9 @@ body {
   background: #FCFCFC;
   box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
+  max-width: 500px;
+  height: 406px;
+  padding: 40px 40px 0;
 }
 
 .delivery-form {
@@ -318,27 +524,79 @@ body {
   color: #B9B9B9;
 }
 
+.delivery-form-date input {
+  width: 117px;
+}
+
+.delivery-form-phone input {
+  width: 287px;
+}
+
 .delivery-form-text {
   color: #565C66;
+  margin: 0;
+  width: 380px;
+}
+
+.delivery-form-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-form div {
+  display: flex;
+  gap: 16px;
+}
+
+.input {
+  height: 48px;
+}
+
+.delivery-form-container label:after {
+  content: url(../images/Info.svg);
+  padding-left: 6px;
+}
+
+.delivery-form-phone label::after {
+  content: none;
 }
 
 /* Стили для contacts */
 
 .contacts {
+  width: 1170px;
+  height: 492px;
   background-color: #FEAFC3;
   background-image: url(../images/three-icecreams.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
+  border-radius: 16px;
+  margin-top: 80px;
 }
 
 .contacts-content {
+  height: 364px;
   background: #FCFCFC;
   box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
+  position: relative;
+  left: 64px;
+  top: 64px;
+  padding-left: 40px;
+  width: 303px;
 }
 
 .contacts-subtitle {
   color: #565C66;
+  width: 179px;
+}
+
+.contacts-subtitle:nth-child(2) {
+  width: 203px;
+}
+
+.phone-schedule-inner {
+  width: 200px;
 }
 
 .contacts-address-text {
@@ -347,8 +605,10 @@ body {
   line-height: 24px;
 }
 
+
 .contacts-address {
   font-style: normal;
+  max-width: 263px
 }
 
 .contacts-phone {
@@ -366,6 +626,23 @@ body {
 }
 
 /* Стили для footer */
+
+.page-footer-container {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(252, 252, 252, 0.3);
+}
+
+.footer-info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 356px;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 
 .footer-info-link {
   text-decoration: none;
@@ -391,9 +668,17 @@ body {
 /* Стили для страницы Каталога */
 
 .breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
+  display: flex;
+}
+
+.breadcrumbs-item {
+  margin-right: 8px;
 }
 
 .breadcrumbs-item:last-child {
@@ -402,10 +687,12 @@ body {
 
 .breadcrumbs-item::after {
   content: url(../images/two-arrows-right.svg);
+  padding-left: 8px;
 }
 
 .breadcrumbs-item:last-child::after {
   content: none;
+  margin-right: 0;
 }
 
 .breadcrumbs-link {
@@ -414,9 +701,30 @@ body {
 }
 
 .translucent-field {
-  background: #FCFCFC;
-  /*opacity: 0.3; пока не разобралась как сделать текст непрозрачным*/
+  background-color: rgba(252, 252, 252, 0.3);
   border-radius: 20px;
+}
+
+.catalog-filter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.catalog-filter-list-fat {
+  width: 383px;
+  display: flex;
+  gap: 16px;
+  padding: 8px 24px;
+
+}
+
+.catalog-filter-list-filler {
+  width: 604px;
+  display: flex;
+  gap: 16px;
+  padding: 10px 24px;
 }
 
 .catalog-filter-products {
@@ -434,6 +742,8 @@ body {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border: none;
+  width: 196px;
 }
 
 .catalog-filter-title {
@@ -447,10 +757,26 @@ body {
   border: 2px solid #FCFCFC;
   border-radius: 20px;
   font-weight: 700;
+  padding: 8px 52px;
+}
+
+.pagination-wrapper {
+  display: flex;
+}
+
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .pagination-link {
   text-decoration: none;
   line-height: 20px;
   color: inherit;
+}
+
+.pagination-show-more {
+  margin: 0 auto;
 }
