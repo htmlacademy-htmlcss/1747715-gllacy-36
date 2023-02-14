@@ -309,6 +309,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: right;
   width: 570px;
+  min-height: 268px;
 }
 
 .gifts-content:last-child {
@@ -372,6 +373,7 @@ body {
   border-radius: 8px;
   width: 270px;
   text-align: center;
+  min-height: 281px;
 }
 
 .catalog-item img {
@@ -428,6 +430,7 @@ body {
   background: #FFFFFF;
   border-radius: 16px;
   margin-top: 80px;
+  min-height: 480px;
 }
 
 .advantages-title {
@@ -485,6 +488,7 @@ body {
   padding: 32px 0 0 32px;
   flex-basis: 570px;
   flex-grow: 0;
+  min-height: 192px;
 }
 
 .blog-title {
@@ -513,6 +517,7 @@ body {
   border-radius: 16px;
   padding: 32px 32px 0 32px;
   flex-grow: 0;
+  min-height: 192px;
 }
 
 .newsletter-form {
