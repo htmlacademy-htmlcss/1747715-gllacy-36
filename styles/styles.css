@@ -287,8 +287,6 @@ body {
 
 /* Стили для gifts */
 
-.gifts {}
-
 .gifts-title {
   text-align: center;
   font-weight: 900;
@@ -311,7 +309,6 @@ body {
   background-repeat: no-repeat;
   background-position-x: right;
   width: 570px;
-  min-height: 268px;
 }
 
 .gifts-content:last-child {
@@ -320,7 +317,7 @@ body {
 
 .gifts-wrapper {
   width: 317px;
-  margin: 36px 0 0 36px;
+  margin: 36px 0 36px 36px;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -374,7 +371,6 @@ body {
   background: #FCFCFC;
   border-radius: 8px;
   width: 270px;
-  min-height: 281px;
   text-align: center;
 }
 
@@ -423,6 +419,7 @@ body {
   max-width: 190px;
   margin: 0 auto;
   margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 /* Стили для advantages */
@@ -431,7 +428,6 @@ body {
   background: #FFFFFF;
   border-radius: 16px;
   margin-top: 80px;
-  min-height: 480px;
 }
 
 .advantages-title {
@@ -447,9 +443,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  ;
   margin: 0;
   margin: 56px 0 0 40px;
+  padding-bottom: 80px;
 }
 
 .advantages-item {
@@ -487,7 +483,6 @@ body {
   background-size: 100%;
   border-radius: 16px;
   padding: 32px 0 0 32px;
-  min-height: 192px;
   flex-basis: 570px;
   flex-grow: 0;
 }
@@ -522,7 +517,7 @@ body {
 
 .newsletter-form {
   display: flex;
-  margin-top: 44px;
+  margin: 44px 0;
 }
 
 .newsletter-form input {
@@ -550,16 +545,15 @@ body {
   background-image: url(../images/icecream-and-fruit.jpg);
   background-position: right;
   border-radius: 16px;
-  min-height: 534px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 80px;
+  padding: 64px 0;
 }
 
 .delivery-container {
   width: 371px;
-  min-height: 204px;
 }
 
 .delivery-title {
@@ -649,8 +643,7 @@ body {
 /* Стили для contacts */
 
 .contacts {
-  width: 1170px;
-  min-height: 492px;
+  padding: 64px;
   background-color: #FEAFC3;
   background-image: url(../images/three-icecreams.jpg);
   background-repeat: no-repeat;
@@ -660,14 +653,10 @@ body {
 }
 
 .contacts-content {
-  min-height: 324px;
   background: #FCFCFC;
   box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
-  position: relative;
-  left: 64px;
-  top: 64px;
-  padding: 40px 0 0 40px;
+  padding: 40px 0 40px 40px;
   width: 303px;
 }
 
