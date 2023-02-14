@@ -95,10 +95,16 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .page-header {
   line-height: 20px;
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .navigation-list {
@@ -106,6 +112,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 32px
 }
@@ -178,6 +185,9 @@ body {
 }
 
 /* Стили для gallery */
+.gallery {
+  margin-bottom: 80px;
+}
 
 .slider-gallery {
   list-style: none;
@@ -196,23 +206,30 @@ body {
 
 .slider-gallery-item {
   display: flex;
-  align-items: center;
+  padding-left: 70px;
+  padding-top: 21px;
 }
 
 .gallery-subtitle {
   font-weight: 900;
   font-size: 36px;
   line-height: 46px;
+  margin: 0;
+  margin-bottom: 24px;
+  margin-top: 136px;
 }
 
 .gallery-text {
   font-size: 18px;
   line-height: 24px;
+  margin: 0;
+  margin-bottom: 48px
 }
 
 .gallery-link {
   line-height: 20px;
   font-weight: 700;
+  display: inline-block;
 }
 
 .slider-gallery-button {
@@ -256,22 +273,21 @@ body {
 
 /* Стили для gifts */
 
-.gifts {
-  margin-top: 80px;
-}
+.gifts {}
 
 .gifts-title {
   text-align: center;
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
+  margin: 0;
+  margin-bottom: 55px
 }
 
 .gifts-content-container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 55px;
 }
 
 .gifts-content {
@@ -281,7 +297,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: right;
   width: 570px;
-  height: 268px;
+  min-height: 268px;
 }
 
 .gifts-content:last-child {
@@ -290,19 +306,28 @@ body {
 
 .gifts-wrapper {
   width: 317px;
-  margin-left: 36px;
+  margin: 36px 0 0 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .gifts-subtitle {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
+}
+
+.gifts-text {
+  margin: 0;
 }
 
 .gifts-link {
   font-weight: 700;
   line-height: 20px;
   color: inherit;
+  align-self: flex-start;
 }
 
 /* Стили для catalog */
@@ -316,12 +341,15 @@ body {
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
+  margin: 0;
 }
 
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 107px;
+  row-gap: 91px
 }
 
 .catalog-item {
@@ -329,17 +357,22 @@ body {
   background: #FCFCFC;
   border-radius: 8px;
   width: 270px;
+  min-height: 281px;
   text-align: center;
 }
 
 .catalog-item img {
   border-radius: 50%;
+  position: relative;
+  bottom: 51px;
 }
 
 .catalog-item-heading {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  margin: 0;
+  margin-top: -35px;
 }
 
 .catalog-item-text {
@@ -347,6 +380,7 @@ body {
   display: block;
   max-width: 190px;
   margin: 0 auto;
+  margin-top: 8px;
 }
 
 .catalog-item-price {
@@ -371,6 +405,7 @@ body {
   align-items: baseline;
   max-width: 190px;
   margin: 0 auto;
+  margin-top: 16px;
 }
 
 /* Стили для advantages */
@@ -378,6 +413,8 @@ body {
 .advantages {
   background: #FFFFFF;
   border-radius: 16px;
+  margin-top: 80px;
+  min-height: 480px;
 }
 
 .advantages-title {
@@ -385,6 +422,8 @@ body {
   font-size: 32px;
   line-height: 46px;
   text-align: center;
+  margin: 0;
+  padding-top: 80px
 }
 
 .advantages-list {
@@ -392,7 +431,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   ;
-  margin-left: 40px;
+  margin: 0;
+  margin: 56px 0 0 40px;
 }
 
 .advantages-item {
@@ -421,15 +461,18 @@ body {
 .aside-container {
   display: flex;
   gap: 30px;
+  margin-top: 80px;
 }
 
 .blog {
   background-color: #FFFFFF;
   background-image: url(../images/rasperry-and-mint.png);
   background-size: 100%;
-  width: 570px;
   border-radius: 16px;
   padding: 32px 0 0 32px;
+  height: 192px;
+  flex-basis: 570px;
+  flex-grow: 0;
 }
 
 .blog-title {
@@ -446,20 +489,29 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+  display: block;
+  margin-top: 12px;
 }
 
 /* Стили для newsletter */
 
 .newsletter {
   background-color: #FFFFFF;
-  width: 570px;
-  height: 224px;
+  flex-basis: 570px;
   border-radius: 16px;
-  padding: 26px;
+  padding: 32px 32px 0 32px;
+  flex-grow: 0;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 44px;
 }
 
 .newsletter-form input {
-  margin-right: 24px;
+  margin-right: 14px;
+  width: 332px;
+  padding: 14px 0 14px 16px;
 }
 
 .newsletter input {
@@ -490,17 +542,20 @@ body {
 
 .delivery-container {
   width: 371px;
-  height: 204px;
+  min-height: 204px;
 }
 
 .delivery-title {
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
+  margin: 0;
 }
 
 .delivery-text {
   color: #565C66;
+  margin: 0;
+  margin-top: 24px;
 }
 
 .delivery-form-container {
@@ -541,15 +596,22 @@ body {
 .delivery-form-inner {
   display: flex;
   flex-direction: column;
+  margin: 0;
+}
+
+.delivery-form-address {
+  margin-top: 20px;
 }
 
 .delivery-form div {
   display: flex;
   gap: 16px;
+  margin-top: 32px;
 }
 
 .input {
   height: 48px;
+  margin-top: 8px;
 }
 
 .delivery-form-container label:after {
@@ -559,6 +621,12 @@ body {
 
 .delivery-form-phone label::after {
   content: none;
+}
+
+.delivery-form-button {
+  margin: 0;
+  margin-top: 32px;
+  text-align: center;
 }
 
 /* Стили для contacts */
@@ -575,20 +643,21 @@ body {
 }
 
 .contacts-content {
-  height: 364px;
+  height: 324px;
   background: #FCFCFC;
   box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
   position: relative;
   left: 64px;
   top: 64px;
-  padding-left: 40px;
+  padding: 40px 0 0 40px;
   width: 303px;
 }
 
 .contacts-subtitle {
   color: #565C66;
   width: 179px;
+  margin: 0;
 }
 
 .contacts-subtitle:nth-child(2) {
@@ -597,18 +666,23 @@ body {
 
 .phone-schedule-inner {
   width: 200px;
+  margin: 0;
+  margin-top: 12px;
 }
 
 .contacts-address-text {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 
 .contacts-address {
   font-style: normal;
-  max-width: 263px
+  max-width: 263px;
+  margin-top: 12px;
 }
 
 .contacts-phone {
@@ -625,12 +699,23 @@ body {
   color: #565C66;
 }
 
+.button-feedback {
+  display: inline-flex;
+  margin-top: 32px;
+}
+
 /* Стили для footer */
+
+.page-footer {
+  min-height: 153px;
+}
 
 .page-footer-container {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid rgba(252, 252, 252, 0.3);
+  min-height: 153px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-info-list {
@@ -666,6 +751,10 @@ body {
 }
 
 /* Стили для страницы Каталога */
+
+.inner-header {
+  padding-top: 32px;
+}
 
 .breadcrumbs {
   list-style: none;
@@ -736,6 +825,8 @@ body {
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
+  margin: 0;
+  margin-top: 16px;
 }
 
 .select-control {
@@ -762,6 +853,7 @@ body {
 
 .pagination-wrapper {
   display: flex;
+  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
 }
 
 .pagination {
