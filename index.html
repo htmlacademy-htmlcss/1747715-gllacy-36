@@ -18,7 +18,8 @@
               <img src="images/logo.svg" alt="Логототип компании." width="137" height="56">
             </a>
           </li>
-          <li class="navigation-item"><a class="navigation-link navigation-link-current" href="catalog.html">Каталог</a>
+          <li class="navigation-item"><a class="navigation-link navigation-link-current navigation-link-catalog"
+              href="catalog.html">Каталог</a>
             <ul class="drop-down-menu-list visually-hidden">
               <li class="drop-down-menu-item">
                 <a class="drop-down-menu-link drop-down-menu-link-current" href="#">Новинки</a>
@@ -39,6 +40,7 @@
           </li>
           <li class="navigation-item"><a class="navigation-link" href="#">Доставка и оплата</a></li>
           <li class="navigation-item"><a class="navigation-link" href="#">О компании</a></li>
+
         </ul>
 
         <ul class="navigation-list navigation-user">
@@ -64,6 +66,7 @@
                   fill="#2D3440" />
               </svg>
               2 товара</a></li>
+
         </ul>
       </nav>
 
@@ -203,8 +206,8 @@
             </ol>
 
             <ul class="social-list gallery-social-list">
-              <li class="footer-social-item">
-                <a class="button" href="https://t.me/htmlacademy">
+              <li class="social-item gallery-social-item">
+                <a class="button social-link" href="https://t.me/htmlacademy">
                   <span class="visually-hidden">Телеграм.</span>
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -215,8 +218,8 @@
                   </svg>
                 </a>
               </li>
-              <li class="footer-social-item">
-                <a class="button" href="https://vk.com/htmlacademy">
+              <li class="social-item gallery-social-item">
+                <a class="button social-link" href="https://vk.com/htmlacademy">
                   <span class="visually-hidden">ВКонтакте.</span>
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -227,8 +230,8 @@
                   </svg>
                 </a>
               </li>
-              <li class="footer-social-item">
-                <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+              <li class="social-item gallery-social-item">
+                <a class="button social-link" href="https://www.youtube.com/user/htmlacademyru">
                   <span class="visually-hidden">Ютюб.</span>
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -390,7 +393,8 @@
                 </p>
                 <p class="delivery-form-phone delivery-form-inner">
                   <label class="delivery-phone" for="delivery-phone">Телефон</label>
-                  <input class="input" type="tel" name="delivery-phone" placeholder="+7 800 999-00-00" id="delivery-phone">
+                  <input class="input" type="tel" name="delivery-phone" placeholder="+7 800 999-00-00"
+                    id="delivery-phone">
                 </p>
               </div>
 
@@ -399,39 +403,38 @@
                 <input class="input" type="text" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8"
                   id="delivery-address">
               </p>
-              <p>
+              <p class="delivery-form-button">
                 <button class="button button-pink" type="submit">Отправить</button>
               </p>
             </form>
           </div>
         </section>
         <section class="contacts">
-
-          <div class="contacts-content">
-            <h2 class="visually-hidden">Контакты</h2>
-            <p class="contacts-subtitle">Адрес главного офиса и офлайн-магазина:</p>
-            <address class="contacts-address">
-              <p class="contacts-address-text">наб. реки Карповки, 5 лит П, Санкт-Петербург</p>
-              <p class="contacts-subtitle">Для заказов по телефону:</p>
-              <p class="phone-schedule-inner">
-                <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-                <span class="contacts-schedule">(с 10 до 20 ежедневно)</span>
-              </p>
-            </address>
-            <a class="button button-feedback button-pink" href="#">Форма обратной связи</a>
-          </div>
-
+            <div class="contacts-content">
+              <h2 class="visually-hidden">Контакты</h2>
+              <p class="contacts-subtitle">Адрес главного офиса и офлайн-магазина:</p>
+              <address class="contacts-address">
+                <p class="contacts-address-text">наб. реки Карповки, 5 лит П, Санкт-Петербург</p>
+                <p class="contacts-subtitle">Для заказов по телефону:</p>
+                <p class="phone-schedule-inner">
+                  <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+                  <span class="contacts-schedule">(с 10 до 20 ежедневно)</span>
+                </p>
+              </address>
+              <a class="button button-feedback button-pink" href="#">Форма обратной связи</a>
+            </div>
         </section>
       </div>
     </main>
+
     <footer class="page-footer">
       <div class="container page-footer-container">
         <div class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
 
           <ul class="social-list footer-social-list">
-            <li class="footer-social-item">
-              <a class="button" href="https://t.me/htmlacademy">
+            <li class="social-item footer-social-item">
+              <a class="button social-link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграм.</span>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -442,8 +445,8 @@
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item">
-              <a class="button" href="https://vk.com/htmlacademy">
+            <li class="social-item footer-social-item">
+              <a class="button social-link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">ВКонтакте.</span>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -454,8 +457,8 @@
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item">
-              <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+            <li class="social-item footer-social-item">
+              <a class="button social-link" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Ютюб.</span>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path

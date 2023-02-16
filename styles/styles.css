@@ -55,7 +55,6 @@ body {
   margin: 0 auto;
 }
 
-.catalog-list,
 .drop-down-menu-list {
   list-style: none;
   margin: 0;
@@ -74,7 +73,7 @@ body {
 .button-white {
   background: #FCFCFC;
   border: 4px solid rgba(252, 252, 252, 0.4);
-  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #2D3440;
   padding: 12px 32px;
@@ -84,7 +83,7 @@ body {
   line-height: 20px;
   background: #FF2F64;
   border: 4px solid rgba(255, 47, 100, 0.3);
-  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #FCFCFC;
   padding: 12px 32px;
@@ -95,10 +94,16 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .page-header {
   line-height: 20px;
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .navigation-list {
@@ -106,12 +111,14 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 32px
 }
 
-.navigation-list:first-child .navigation-item:nth-child(2)::after {
+.navigation-link-catalog::after {
   content: url(../images/Arrow-down.svg);
+  padding-left: 6px;
 }
 
 .navigation-link {
@@ -119,6 +126,7 @@ body {
   color: inherit;
   text-decoration: none;
   text-align: center;
+  padding: 20px 0;
 }
 
 .navigation-link svg:not(.navigation-search) {
@@ -178,6 +186,9 @@ body {
 }
 
 /* Стили для gallery */
+.gallery {
+  margin-bottom: 80px;
+}
 
 .slider-gallery {
   list-style: none;
@@ -196,23 +207,30 @@ body {
 
 .slider-gallery-item {
   display: flex;
-  align-items: center;
+  padding-left: 70px;
+  padding-top: 21px;
 }
 
 .gallery-subtitle {
   font-weight: 900;
   font-size: 36px;
   line-height: 46px;
+  margin: 0;
+  margin-bottom: 24px;
+  margin-top: 136px;
 }
 
 .gallery-text {
   font-size: 18px;
   line-height: 24px;
+  margin: 0;
+  margin-bottom: 48px
 }
 
 .gallery-link {
   line-height: 20px;
   font-weight: 700;
+  display: inline-block;
 }
 
 .slider-gallery-button {
@@ -227,7 +245,20 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 16px;
+  /* gap: 16px; */
+  flex-wrap: wrap;
+}
+
+.social-link {
+  padding: 25px 8px;
+}
+
+.footer-social-item:first-child a {
+  padding-left: 0;
+}
+
+.gallery-social-item:last-child a {
+  padding-right: 0;
 }
 
 .slider-pagination {
@@ -256,22 +287,19 @@ body {
 
 /* Стили для gifts */
 
-.gifts {
-  margin-top: 80px;
-}
-
 .gifts-title {
   text-align: center;
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
+  margin: 0;
+  margin-bottom: 55px
 }
 
 .gifts-content-container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 55px;
 }
 
 .gifts-content {
@@ -281,7 +309,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: right;
   width: 570px;
-  height: 268px;
+  min-height: 268px;
 }
 
 .gifts-content:last-child {
@@ -290,19 +318,28 @@ body {
 
 .gifts-wrapper {
   width: 317px;
-  margin-left: 36px;
+  margin: 36px 0 36px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .gifts-subtitle {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
+}
+
+.gifts-text {
+  margin: 0;
 }
 
 .gifts-link {
   font-weight: 700;
   line-height: 20px;
   color: inherit;
+  align-self: flex-start;
 }
 
 /* Стили для catalog */
@@ -316,12 +353,18 @@ body {
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
+  margin: 0;
 }
 
 .catalog-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 107px;
+  row-gap: 91px
 }
 
 .catalog-item {
@@ -330,16 +373,21 @@ body {
   border-radius: 8px;
   width: 270px;
   text-align: center;
+  min-height: 281px;
 }
 
 .catalog-item img {
   border-radius: 50%;
+  position: relative;
+  bottom: 51px;
 }
 
 .catalog-item-heading {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  margin: 0;
+  margin-top: -35px;
 }
 
 .catalog-item-text {
@@ -347,6 +395,7 @@ body {
   display: block;
   max-width: 190px;
   margin: 0 auto;
+  margin-top: 8px;
 }
 
 .catalog-item-price {
@@ -371,6 +420,8 @@ body {
   align-items: baseline;
   max-width: 190px;
   margin: 0 auto;
+  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 /* Стили для advantages */
@@ -378,6 +429,8 @@ body {
 .advantages {
   background: #FFFFFF;
   border-radius: 16px;
+  margin-top: 80px;
+  min-height: 480px;
 }
 
 .advantages-title {
@@ -385,14 +438,17 @@ body {
   font-size: 32px;
   line-height: 46px;
   text-align: center;
+  margin: 0;
+  padding-top: 80px
 }
 
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  ;
-  margin-left: 40px;
+  margin: 0;
+  margin: 56px 0 0 40px;
+  padding-bottom: 80px;
 }
 
 .advantages-item {
@@ -421,15 +477,18 @@ body {
 .aside-container {
   display: flex;
   gap: 30px;
+  margin-top: 80px;
 }
 
 .blog {
   background-color: #FFFFFF;
   background-image: url(../images/rasperry-and-mint.png);
   background-size: 100%;
-  width: 570px;
   border-radius: 16px;
   padding: 32px 0 0 32px;
+  flex-basis: 570px;
+  flex-grow: 0;
+  min-height: 192px;
 }
 
 .blog-title {
@@ -446,20 +505,30 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+  display: block;
+  margin-top: 12px;
 }
 
 /* Стили для newsletter */
 
 .newsletter {
   background-color: #FFFFFF;
-  width: 570px;
-  height: 224px;
+  flex-basis: 570px;
   border-radius: 16px;
-  padding: 26px;
+  padding: 32px 32px 0 32px;
+  flex-grow: 0;
+  min-height: 192px;
+}
+
+.newsletter-form {
+  display: flex;
+  margin: 44px 0;
 }
 
 .newsletter-form input {
-  margin-right: 24px;
+  margin-right: 14px;
+  width: 332px;
+  padding: 14px 0 14px 16px;
 }
 
 .newsletter input {
@@ -481,34 +550,36 @@ body {
   background-image: url(../images/icecream-and-fruit.jpg);
   background-position: right;
   border-radius: 16px;
-  height: 534px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 80px;
+  padding: 64px 0;
 }
 
 .delivery-container {
   width: 371px;
-  height: 204px;
 }
 
 .delivery-title {
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
+  margin: 0;
 }
 
 .delivery-text {
   color: #565C66;
+  margin: 0;
+  margin-top: 24px;
 }
 
 .delivery-form-container {
   background: #FCFCFC;
-  box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
   max-width: 500px;
-  height: 406px;
+  min-height: 406px;
   padding: 40px 40px 0;
 }
 
@@ -541,15 +612,22 @@ body {
 .delivery-form-inner {
   display: flex;
   flex-direction: column;
+  margin: 0;
+}
+
+.delivery-form-address {
+  margin-top: 20px;
 }
 
 .delivery-form div {
   display: flex;
   gap: 16px;
+  margin-top: 32px;
 }
 
 .input {
   height: 48px;
+  margin-top: 8px;
 }
 
 .delivery-form-container label:after {
@@ -561,11 +639,16 @@ body {
   content: none;
 }
 
+.delivery-form-button {
+  margin: 0;
+  margin-top: 32px;
+  text-align: center;
+}
+
 /* Стили для contacts */
 
 .contacts {
-  width: 1170px;
-  height: 492px;
+  padding: 64px;
   background-color: #FEAFC3;
   background-image: url(../images/three-icecreams.jpg);
   background-repeat: no-repeat;
@@ -575,20 +658,17 @@ body {
 }
 
 .contacts-content {
-  height: 364px;
   background: #FCFCFC;
-  box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
-  position: relative;
-  left: 64px;
-  top: 64px;
-  padding-left: 40px;
+  padding: 40px 0 40px 40px;
   width: 303px;
 }
 
 .contacts-subtitle {
   color: #565C66;
   width: 179px;
+  margin: 0;
 }
 
 .contacts-subtitle:nth-child(2) {
@@ -597,18 +677,23 @@ body {
 
 .phone-schedule-inner {
   width: 200px;
+  margin: 0;
+  margin-top: 12px;
 }
 
 .contacts-address-text {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 
 .contacts-address {
   font-style: normal;
-  max-width: 263px
+  max-width: 263px;
+  margin-top: 12px;
 }
 
 .contacts-phone {
@@ -625,23 +710,34 @@ body {
   color: #565C66;
 }
 
+.button-feedback {
+  display: inline-flex;
+  margin-top: 32px;
+}
+
 /* Стили для footer */
+
+.page-footer {
+  min-height: 153px;
+}
 
 .page-footer-container {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid rgba(252, 252, 252, 0.3);
+  min-height: 153px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-info-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 356px;
+  min-width: 356px;
   height: 48px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .footer-info-link {
@@ -666,6 +762,10 @@ body {
 }
 
 /* Стили для страницы Каталога */
+
+.inner-header {
+  padding-top: 32px;
+}
 
 .breadcrumbs {
   list-style: none;
@@ -698,11 +798,16 @@ body {
 .breadcrumbs-link {
   text-decoration: none;
   color: inherit;
+  padding: 25px 0;
 }
 
 .translucent-field {
   background-color: rgba(252, 252, 252, 0.3);
   border-radius: 20px;
+}
+
+.catalog-filter {
+  margin-top: 40px;
 }
 
 .catalog-filter-list {
@@ -736,6 +841,8 @@ body {
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
+  margin: 0;
+  margin-top: 16px;
 }
 
 .select-control {
@@ -744,6 +851,7 @@ body {
   line-height: inherit;
   border: none;
   width: 196px;
+  padding: 8px 0 8px 16px;
 }
 
 .catalog-filter-title {
@@ -760,8 +868,21 @@ body {
   padding: 8px 52px;
 }
 
+.page-catalog {
+  margin: 0;
+  margin-top: 95px;
+  margin-bottom: 40px;
+}
+
+.page-catalog-list {
+  margin: 0;
+}
+
 .pagination-wrapper {
   display: flex;
+  margin-top: 16px;
+  min-height: 126px;
+  align-items: center;
 }
 
 .pagination {
@@ -769,14 +890,26 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination-link {
   text-decoration: none;
   line-height: 20px;
   color: inherit;
+  padding: 25px 7px;
 }
 
 .pagination-show-more {
   margin: 0 auto;
+}
+
+.catalog-page-footer-container {
+  border-top: 1px solid rgba(252, 252, 252, 0.3);
+}
+
+.pagination-current {
+  background: #FCFCFC;
+  border-radius: 50px;
+  padding: 2px 8px;
 }
