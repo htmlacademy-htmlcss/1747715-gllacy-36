@@ -449,6 +449,7 @@ body {
   margin: 0;
   margin: 56px 0 0 40px;
   padding-bottom: 80px;
+  list-style-type: none;
 }
 
 .advantages-item {
@@ -891,17 +892,18 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin-left: auto;
 }
 
 .pagination-link {
   text-decoration: none;
   line-height: 20px;
   color: inherit;
-  padding: 25px 7px;
+  padding: 10px 7px;
 }
 
 .pagination-show-more {
-  margin: 0 auto;
+  margin-left: 487px;
 }
 
 .catalog-page-footer-container {
