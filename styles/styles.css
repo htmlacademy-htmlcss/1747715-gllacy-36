@@ -76,7 +76,7 @@ body {
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #2D3440;
-  padding: 12px 32px;
+  padding: 8px 28px;
 }
 
 .button-pink {
@@ -86,7 +86,7 @@ body {
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #FCFCFC;
-  padding: 12px 32px;
+  padding: 8px 28px;
 }
 
 /* Стили для header */
@@ -193,7 +193,7 @@ body {
 
 /* Стили для gallery */
 .gallery {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 
 .slider-gallery {
@@ -223,7 +223,7 @@ body {
   line-height: 46px;
   margin: 0;
   margin-bottom: 24px;
-  margin-top: 136px;
+  margin-top: 113px;
 }
 
 .gallery-text {
@@ -244,6 +244,16 @@ body {
   background: none;
   border-radius: 26px;
   cursor: pointer;
+}
+
+.slider-gallery-button:first-child {
+  position: relative;
+  left: 21px;
+}
+
+.slider-gallery-button:nth-child(3) {
+  position: relative;
+  right: 21px;
 }
 
 .social-list {
@@ -294,12 +304,15 @@ body {
 /* Стили для gifts */
 
 .gifts-title {
+  width: 434px;
   text-align: center;
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
   margin: 0;
-  margin-bottom: 55px
+  margin-bottom: 55px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .gifts-content-container {
@@ -314,6 +327,7 @@ body {
   background-image: url(../images/raspberry.png);
   background-repeat: no-repeat;
   background-position-x: right;
+  background-position-y: bottom;
   width: 570px;
   min-height: 268px;
 }
@@ -339,6 +353,7 @@ body {
 
 .gifts-text {
   margin: 0;
+  width: 304px;
 }
 
 .gifts-link {
@@ -355,11 +370,14 @@ body {
 }
 
 .catalog-subtitle {
+  width: 527px;
   text-align: center;
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
   margin: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .catalog-list {
@@ -457,8 +475,9 @@ body {
   justify-content: space-between;
   margin: 0;
   margin: 56px 0 0 40px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   list-style-type: none;
+  padding-left: 80px;
 }
 
 .advantages-item {
@@ -510,6 +529,7 @@ body {
 }
 
 .blog-link {
+  width: 303px;
   text-decoration: none;
   color: inherit;
   font-weight: 700;
@@ -525,7 +545,7 @@ body {
   background-color: #FFFFFF;
   flex-basis: 570px;
   border-radius: 16px;
-  padding: 32px 32px 0 32px;
+  padding: 17px 24px 0 24px;
   flex-grow: 0;
   min-height: 192px;
 }
@@ -607,6 +627,7 @@ body {
   font-size: inherit;
   line-height: inherit;
   color: #B9B9B9;
+  padding-left: 16px;
 }
 
 .delivery-form-date {
@@ -618,11 +639,11 @@ body {
 }
 
 .delivery-form-date input {
-  width: 117px;
+  padding-left: 16px;
 }
 
 .delivery-form-phone input {
-  width: 287px;
+  padding-left: 16px;
 }
 
 .delivery-form-text {
@@ -736,6 +757,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #565C66;
+  display: block;
 }
 
 .button-feedback {
