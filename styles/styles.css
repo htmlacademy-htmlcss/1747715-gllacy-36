@@ -589,6 +589,7 @@ body {
 
 .delivery-container {
   width: 371px;
+  margin-left: 30px;
 }
 
 .delivery-title {
@@ -610,6 +611,7 @@ body {
   border-radius: 8px;
   max-width: 500px;
   padding: 40px 40px 0;
+  margin-right: -10px;
 }
 
 .delivery-form {
