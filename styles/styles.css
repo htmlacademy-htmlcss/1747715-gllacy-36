@@ -193,7 +193,7 @@ body {
 
 /* Стили для gallery */
 .gallery {
-  margin-bottom: 70px;
+  margin-bottom: 72px;
 }
 
 .slider-gallery {
@@ -248,12 +248,23 @@ body {
 
 .slider-gallery-button:first-child {
   position: relative;
-  left: 21px;
+  left: 22px;
 }
 
-.slider-gallery-button:nth-child(3) {
+.slider-gallery-button:nth-child(4) {
   position: relative;
-  right: 21px;
+  right: 32px;
+}
+
+.slider-wrapper-decoration {
+  width: 327.15px;
+  background: #FFCBD8;
+  z-index: -1;
+  height: 312px;
+  border-radius: 50%;
+  position: fixed;
+  top: 230px;
+  right: 337px;
 }
 
 .social-list {
