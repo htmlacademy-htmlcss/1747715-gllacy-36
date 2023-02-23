@@ -72,21 +72,52 @@ body {
 
 .button-white {
   background: #FCFCFC;
-  border: 4px solid rgba(252, 252, 252, 0.4);
+  outline: 4px solid rgba(252, 252, 252, 0.4);
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #2D3440;
-  padding: 8px 28px;
+  padding: 12px 32px;
+}
+
+.button-white:hover {
+  background: rgba(252, 252, 252, 0.4);
+  outline: 4px solid #FCFCFC;
+}
+
+.button-white:active {
+  background: #FCFCFC;
+  outline: 2px solid #2D3440;
+}
+
+.button-white:focus {
+  background: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #2D3440;
 }
 
 .button-pink {
+  border: none;
   line-height: 20px;
   background: #FF2F64;
-  border: 4px solid rgba(255, 47, 100, 0.3);
+  outline: 4px solid rgba(255, 47, 100, 0.3);
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #FCFCFC;
-  padding: 8px 28px;
+  padding: 12px 32px;
+}
+
+.button-pink:hover {
+  color: #2D3440;
+  background: rgba(252, 252, 252, 0.3);
+  outline: 4px solid #FF2F64;
+}
+
+.button-pink:active {
+  background: #FEAFC3;
+  outline: 2px solid #2D3440;
+}
+
+.button-pink:focus {
+  outline: 2px solid #2D3440;
 }
 
 /* Стили для header */
@@ -151,6 +182,10 @@ body {
   text-align: center;
 }
 
+.navigation-link.logo {
+  margin-right: 16px;
+}
+
 .navigation-second-header-list:active {
   background: rgba(252, 252, 252, 0.5);
   border-radius: 27px;
@@ -186,6 +221,7 @@ body {
 
 .navigation-user .navigation-item:nth-child(3) a {
   padding: 6px 16px;
+  align-items: center;
 }
 
 .navigation-user .navigation-item:nth-child(4) a {
@@ -287,14 +323,49 @@ body {
   background: none;
   border-radius: 26px;
   cursor: pointer;
+  background: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FCFCFC;
+  border-radius: 26px;
+  width: 38px;
+  height: 38px;
+  top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.slider-gallery-button:first-child {
+.slider-gallery-button:nth-of-type(1) {
   position: relative;
   left: 22px;
 }
 
-.slider-gallery-button:nth-child(4) {
+.slider-gallery-button:hover {
+  background: #FCFCFC;
+}
+
+.slider-gallery-button:hover path {
+  fill: #2D3440;
+}
+
+.slider-gallery-button:active {
+  background: rgba(252, 252, 252, 0.5);
+  border-color: rgba(252, 252, 252, 0.5);
+}
+
+.slider-gallery-button:active path {
+  fill: #2D3440;
+}
+
+.slider-gallery-button:focus {
+  background: rgba(252, 252, 252, 0.3);
+  border-color: #2D3440;
+}
+
+.slider-gallery-button:focus path {
+  fill: #2D3440;
+}
+
+.slider-gallery-button:nth-of-type(2) {
   position: relative;
   right: 32px;
 }
@@ -316,12 +387,17 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  /* gap: 16px; */
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .social-link {
-  padding: 25px 6px;
+  padding: 25px 8px;
+}
+
+.social-link svg {
+  outline: 2px solid rgba(252, 252, 252, 0.3);
+  border-radius: 24px;
 }
 
 .footer-social-item:first-child a {
@@ -345,10 +421,25 @@ body {
   background: rgba(252, 252, 252, 0.3);
   padding: 6px;
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .slider-pagination-button-current {
   background: #FCFCFC;
+}
+
+.slider-pagination-button:hover:not(.slider-pagination-button-current) {
+  background: rgba(252, 252, 252, 0.3);
+  outline: 1px solid #FCFCFC;
+}
+
+.slider-pagination-button:active {
+  background: #FCFCFC;
+}
+
+.slider-pagination-button:focus {
+  background: rgba(252, 252, 252, 0.3);
+  outline: 1px solid #2D3440;
 }
 
 .lists-wrapper {
@@ -462,6 +553,7 @@ body {
   border-radius: 50%;
   position: relative;
   bottom: 51px;
+  filter: drop-shadow(0px 4px 12px rgba(45, 52, 64, 0.1));
 }
 
 .catalog-item-heading {
@@ -496,6 +588,23 @@ body {
   display: flex;
 }
 
+.catalog-item .button:hover {
+  background: rgba(252, 252, 252, 0.3);
+}
+
+.catalog-item .button:hover path,
+.catalog-item .button:active path {
+  fill: #2D3440;
+}
+
+.catalog-item .button:active {
+  background: #FFCBD8;
+}
+
+.catalog-item .button:focus {
+  border-color: #2D3440;
+}
+
 .price-and-cart-wrapper {
   display: flex;
   justify-content: space-between;
@@ -527,33 +636,35 @@ body {
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0;
-  margin: 56px 0 0 40px;
-  padding-bottom: 60px;
+  margin-top: 56px;
+  padding-left: 64px;
+  row-gap: 40px;
+  column-gap: 29px;
   list-style-type: none;
-  padding-left: 80px;
 }
 
 .advantages-item {
   color: #565C66;
-  width: 500px;
+  width: 510px;
+  display: flex;
+  gap: 16px;
 }
 
-.advantages-item:first-child {
-  list-style: url(../images/list-style-icecream.svg);
+.advantages-item:first-child::before {
+  content: url(../images/list-style-icecream.svg);
 }
 
-.advantages-item:nth-child(2) {
-  list-style: url(../images/list-style-cow.svg);
+.advantages-item:nth-child(2)::before {
+  content: url(../images/list-style-cow.svg);
 }
 
-.advantages-item:nth-child(3) {
-  list-style: url(../images/list-style-leaf.svg);
+.advantages-item:nth-child(3)::before {
+  content: url(../images/list-style-leaf.svg);
 }
 
-.advantages-item:nth-child(4) {
-  list-style: url(../images/list-style-thermometer.svg);
+.advantages-item:nth-child(4)::before {
+  content: url(../images/list-style-thermometer.svg);
 }
 
 /* Стили для blog */
@@ -566,8 +677,10 @@ body {
 
 .blog {
   background-color: #FFFFFF;
-  background-image: url(../images/rasperry-and-mint.png);
+  background-image: url(../images/rasperry-and-mint.jpg);
+  background-repeat: no-repeat;
   background-size: 100%;
+  background-position: 10% 60%;
   border-radius: 16px;
   padding: 32px 0 0 32px;
   flex-basis: 570px;
@@ -852,8 +965,9 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-left: 36px;
+  row-gap: 6px;
+  margin-left: 50px;
+  line-height: 20px;
 }
 
 .footer-info-link {
@@ -864,19 +978,27 @@ body {
 }
 
 .footer-info-item:first-child {
+  margin-left: -22px;
   font-weight: 700;
-  list-style: url(../images/heart.svg);
+  display: flex;
+}
+
+.footer-info-item:first-child:before {
+  content: url(../images/heart.svg);
+  margin-right: 10px;
 }
 
 .about-text {
   font-size: 12px;
   line-height: 16px;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .htmlacademy-link {
   color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid black;
 }
 
 /* Стили для страницы Каталога */
@@ -929,7 +1051,7 @@ body {
 }
 
 .catalog-filter {
-  margin-top: 40px;
+  margin-top: 37px;
   width: 900px;
   display: flex;
   flex-wrap: wrap;
@@ -945,15 +1067,12 @@ body {
 }
 
 .catalog-filter-list-fat {
-  width: 383px;
   display: flex;
   gap: 16px;
   padding: 8px 24px;
-
 }
 
 .catalog-filter-list-filler {
-  width: 604px;
   display: flex;
   gap: 16px;
   padding: 10px 24px;
@@ -970,6 +1089,10 @@ body {
   margin-right: 8px;
 }
 
+.sort-wrapper label {
+  margin-left: 16px;
+}
+
 .catalog-filter-products-title {
   font-weight: 900;
   font-size: 32px;
@@ -984,8 +1107,7 @@ body {
   line-height: inherit;
   border: none;
   width: 196px;
-  padding: 8px 0 8px 16px;
-  margin-right: 8px;
+  padding: 8px 0 9px 11px;
 }
 
 .catalog-filter-title {
@@ -994,6 +1116,7 @@ body {
   line-height: 20px;
   margin: 0;
   margin-bottom: 8px;
+  margin-left: 16px;
 }
 
 .button-transparent {
@@ -1002,6 +1125,21 @@ body {
   border-radius: 20px;
   font-weight: 700;
   padding: 8px 52px;
+}
+
+.button-transparent:hover {
+  background: rgba(252, 252, 252, 0.5);
+  border: 2px solid rgba(252, 252, 252, 0.5);
+}
+
+.button-transparent:active {
+  background: #FCFCFC;
+  border: 2px solid rgba(252, 252, 252, 0.3);
+}
+
+.button-transparent:focus {
+  background: rgba(252, 252, 252, 0.3);
+  border: 2px solid #2D3440;
 }
 
 .page-catalog {
@@ -1038,7 +1176,22 @@ body {
   text-decoration: none;
   line-height: 20px;
   color: inherit;
-  padding: 10px 7px;
+  border-radius: 50px;
+  padding: 2px 7px;
+}
+
+.pagination-next,
+.pagination-prev {
+  display: flex;
+}
+
+.pagination-link:not(.pagination-disabled):hover {
+  background: rgba(252, 252, 252, 0.5);
+}
+
+.pagination-link:not(.pagination-disabled):active {
+  background: rgba(252, 252, 252, 0.5);
+  outline: 1px solid #FCFCFC;
 }
 
 .pagination-show-more {
