@@ -619,9 +619,21 @@ body {
 
 .advantages {
   background: #FFFFFF;
+  background-image: url(../images/waffle-background.jpg);
+  background-size: 20%;
   border-radius: 16px;
   margin-top: 80px;
   min-height: 480px;
+}
+
+.advantages-wrapper {
+  background: #FFFFFF;
+  border-radius: 16px;
+  position: relative;
+  top: 24px;
+  padding-bottom: 56px;
+  width: 1122px;
+  margin: 0 auto;
 }
 
 .advantages-title {
@@ -630,7 +642,7 @@ body {
   line-height: 46px;
   text-align: center;
   margin: 0;
-  padding-top: 80px
+  padding-top: 56px;
 }
 
 .advantages-list {
@@ -638,7 +650,7 @@ body {
   flex-wrap: wrap;
   margin: 0;
   margin-top: 56px;
-  padding-left: 64px;
+  padding-left: 40px;
   row-gap: 40px;
   column-gap: 29px;
   list-style-type: none;
@@ -679,8 +691,8 @@ body {
   background-color: #FFFFFF;
   background-image: url(../images/rasperry-and-mint.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 10% 60%;
+  background-size: 110%;
+  background-position: -10px;
   border-radius: 16px;
   padding: 32px 0 0 32px;
   flex-basis: 570px;
@@ -704,14 +716,14 @@ body {
   font-size: 24px;
   line-height: 30px;
   display: block;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 /* Стили для newsletter */
 
 .newsletter {
   background-color: #FFFFFF;
-  flex-basis: 570px;
+  flex-basis: 50px;
   border-radius: 16px;
   padding: 17px 24px 0 24px;
   flex-grow: 0;
