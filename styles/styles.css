@@ -723,22 +723,32 @@ body {
 
 .newsletter {
   background-color: #FFFFFF;
+  background-image: url(../images/lines-background.jpg);
+  background-size: 100%;
   flex-basis: 50px;
   border-radius: 16px;
-  padding: 17px 24px 0 24px;
   flex-grow: 0;
   min-height: 192px;
 }
 
+.newsletter-wrapper {
+  width: 505px;
+  background-color: #FFFFFF;
+  padding: 26px;
+  margin: 6px;
+}
+
 .newsletter-form {
-  display: flex;
-  margin: 44px 0;
+  margin-top: 44px;
 }
 
 .newsletter-form input {
-  margin-right: 14px;
+  box-sizing: border-box;
+  border: 1px solid #B9B9B9;
+  margin-right: 13px;
   width: 332px;
-  padding: 14px 0 14px 16px;
+  padding: 14px 0 13px 16px;
+  border-radius: 4px;
 }
 
 .newsletter input {
@@ -888,6 +898,7 @@ body {
   padding: 64px;
   background-color: #FEAFC3;
   background-image: url(../images/three-icecreams.jpg);
+  background-position-y: 50%;
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 16px;
@@ -990,7 +1001,7 @@ body {
 }
 
 .footer-info-item:first-child {
-  margin-left: -22px;
+  margin-left: -24px;
   font-weight: 700;
   display: flex;
 }
