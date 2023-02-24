@@ -285,10 +285,24 @@ body {
 }
 
 .slider-wrapper {
-  display: flex;
-  position: relative;
+  display: grid;
+  width: 367px;
+  margin-left: 26px;
 }
 
+.icecream-wrapper {
+
+}
+
+.slider-gallery-item:first-child .slider-wrapper::after {
+  content: url(../images/slideshow-creamy.png);
+  grid-column: 2/3;
+}
+
+.slider-gallery-image {
+  grid-area: 1/-1/1/2;
+  margin: 0 auto;
+}
 
 .slider-gallery-item {
   display: flex;
@@ -332,11 +346,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  grid-area: 1/-1/1/2;
+  align-self: center;
+
 }
 
-.slider-gallery-button:nth-of-type(1) {
-  position: relative;
-  left: 22px;
+.slider-gallery-button:nth-of-type(2) {
+  margin-left: auto;
 }
 
 .slider-gallery-button:hover {
@@ -365,11 +381,6 @@ body {
   fill: #2D3440;
 }
 
-.slider-gallery-button:nth-of-type(2) {
-  position: relative;
-  right: 32px;
-}
-
 .slider-wrapper-decoration {
   width: 327.15px;
   background-color: white;
@@ -377,9 +388,9 @@ body {
   z-index: -1;
   height: 312px;
   border-radius: 50%;
-  position: absolute;
-  top: 94px;
-  left: 47px;
+  grid-area: 1/-1/1/2;
+  align-self: center;
+  margin: 0 auto;
 }
 
 .social-list {
@@ -689,10 +700,7 @@ body {
 
 .blog {
   background-color: #FFFFFF;
-  background-image: url(../images/rasperry-and-mint.jpg);
-  background-repeat: no-repeat;
-  background-size: 110%;
-  background-position: -10px;
+  background-image: url(../images/raspberry-and-mint.jpg);
   border-radius: 16px;
   padding: 32px 0 0 32px;
   flex-basis: 570px;
@@ -774,9 +782,6 @@ body {
 .delivery {
   background-color: #FFFFFF;
   background-image: url(../images/icecream-and-fruit.jpg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 16px;
   display: flex;
   justify-content: space-around;
