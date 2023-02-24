@@ -21,6 +21,12 @@
   font-style: normal;
 }
 
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
 html {
   height: 100%;
 }
@@ -278,6 +284,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .slider-gallery-container {
@@ -290,15 +297,6 @@ body {
   margin-left: 26px;
 }
 
-.icecream-wrapper {
-
-}
-
-.slider-gallery-item:first-child .slider-wrapper::after {
-  content: url(../images/slideshow-creamy.png);
-  grid-column: 2/3;
-}
-
 .slider-gallery-image {
   grid-area: 1/-1/1/2;
   margin: 0 auto;
@@ -308,6 +306,39 @@ body {
   display: flex;
   padding-left: 70px;
   padding-top: 21px;
+}
+
+.slider-gallery-item:nth-child(2),
+.slider-gallery-item:nth-child(3) {
+  width: 100px;
+  padding-left: 0;
+}
+
+.slider-gallery-item:nth-child(3) {
+  margin-left: 41px;
+}
+
+.slider-gallery-item:nth-child(2) .slider-gallery-container,
+.slider-gallery-item:nth-child(3) .slider-gallery-container {
+  display: none;
+}
+
+.slider-gallery-item:nth-child(2) .slider-wrapper,
+.slider-gallery-item:nth-child(3) .slider-wrapper {
+  transform: scale(0.3);
+  opacity: 0.4;
+  width: 100px;
+  margin: 0;
+}
+
+.slider-gallery-item:nth-child(2) .slider-wrapper-decoration,
+.slider-gallery-item:nth-child(3) .slider-wrapper-decoration {
+  max-width: 100%;
+}
+
+.slider-gallery-item:nth-child(2) .slider-gallery-button,
+.slider-gallery-item:nth-child(3) .slider-gallery-button {
+  opacity: 0;
 }
 
 .gallery-subtitle {
@@ -701,6 +732,8 @@ body {
 .blog {
   background-color: #FFFFFF;
   background-image: url(../images/raspberry-and-mint.jpg);
+  background-position-x: right;
+  background-repeat: no-repeat;
   border-radius: 16px;
   padding: 32px 0 0 32px;
   flex-basis: 570px;
@@ -980,7 +1013,6 @@ body {
 .page-footer-container {
   display: flex;
   justify-content: space-between;
-  min-height: 153px;
   flex-wrap: wrap;
   align-items: flex-start;
   padding-top: 48px;
