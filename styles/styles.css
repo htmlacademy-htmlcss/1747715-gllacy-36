@@ -339,9 +339,10 @@ body {
 
 .navigation-user .navigation-item:nth-child(2) a:focus,
 .navigation-user .navigation-item:nth-child(3) a:focus,
-.navigation-user .navigation-item:nth-child(4) a:focus {
+.navigation-user .navigation-link-cart:focus {
   background: rgba(252, 252, 252, 0.5);
   outline: 2px solid #2D3440;
+  color: #2D3440;
 }
 
 /* Стили для main */
@@ -1465,8 +1466,6 @@ body {
   position: absolute;
   z-index: 1;
   box-sizing: border-box;
-  /*   min-width: 288px;
-  min-height: 60px; */
   filter: drop-shadow(0px 15px 40px rgba(45, 52, 64, 0.12));
   background: #FCFCFC;
   border-radius: 4px;
@@ -1474,6 +1473,11 @@ body {
   margin-top: 8px;
   right: 0px;
   display: none;
+}
+
+.navigation-item-cart:focus-within .navigation-link-cart  {
+  background: #FF4A78;
+  color: #FCFCFC;
 }
 
 .navigation-item-cart:focus-within .popover {
@@ -1532,6 +1536,7 @@ body {
 .button-delete-product-popover-cart {
   width: 16px;
   height: 16px;
+  background-image: url(../images/Cross.svg);
   border: none;
   background-color: inherit;
   cursor: pointer;
@@ -1547,6 +1552,7 @@ body {
 
 .button-checkout-popover-cart {
   cursor: pointer;
+
 }
 
 .popover-cart-summary {
