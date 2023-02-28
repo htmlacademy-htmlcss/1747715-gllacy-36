@@ -1628,3 +1628,27 @@ body {
 .navigation-item-login:focus-within .popup-login {
   display: block;
 }
+
+/* Popup Search */
+
+.popup-search {
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 1;
+  right: 0;
+  margin-top: 8px;
+  background: #FCFCFC;
+  border-radius: 4px;
+  filter: drop-shadow(0px 8px 16px rgba(45, 52, 64, 0.12));
+  padding: 24px 16px;
+}
+
+.popup-search input {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 16px;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+  background: #FFFFFF;
+  min-width: 324px;
+}
