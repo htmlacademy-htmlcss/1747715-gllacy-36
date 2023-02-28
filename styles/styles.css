@@ -71,6 +71,7 @@ body {
   border-radius: 26px;
   color: #2D3440;
   padding: 12px 32px;
+  position: relative;
 }
 
 .button-white:hover {
@@ -96,6 +97,7 @@ body {
   color: #B9B9B9;
 }
 
+
 .button-pink {
   border: none;
   font-size: 16px;
@@ -107,6 +109,7 @@ body {
   border-radius: 26px;
   color: #FCFCFC;
   padding: 12px 32px;
+  position: relative;
 }
 
 .button-pink:hover {
@@ -129,6 +132,65 @@ body {
   background: #B9B9B9;
   outline: 4px solid rgba(185, 185, 185, 0.3);
   color: #565C66;
+}
+
+/* Spinner */
+
+
+.button-download {
+  padding-right: 56px;
+}
+
+.button-download::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  opacity: 0.24;
+  border: 2px solid rgba(24, 24, 24, 0.24);
+  border-top: 2px solid rgba(24, 24, 24, 1);
+  border-radius: 50%;
+  margin-left: 9px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0)
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button-download-pink {
+  padding-right: 56px;
+}
+
+.button-download-pink::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  right: 25px;
+  opacity: 0.24;
+  border: 2px solid rgba(252, 252, 252, 0.25);
+  border-top: 2px solid #FCFCFC;
+  border-radius: 50%;
+  margin-left: 9px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0)
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Стили для header */
@@ -1597,10 +1659,10 @@ body {
   margin: 0;
   box-sizing: border-box;
   padding-left: 16px;
+  font-size: 16px;
 }
 
 .popup-login input:first-child {
-  font-size: 16px;
   padding-left: 16px;
   min-width: 324px;
   margin-top: 32px;
