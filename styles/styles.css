@@ -1641,6 +1641,7 @@ body {
   border-radius: 4px;
   filter: drop-shadow(0px 8px 16px rgba(45, 52, 64, 0.12));
   padding: 24px 16px;
+  display: none;
 }
 
 .popup-search input {
@@ -1651,4 +1652,8 @@ body {
   border-radius: 4px;
   background: #FFFFFF;
   min-width: 324px;
+}
+
+.navigation-item-search:focus-within .popup-search {
+  display: block;
 }
