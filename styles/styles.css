@@ -1007,12 +1007,6 @@ body {
   color: #B9B9B9;
 }
 
-/* input:placeholder-shown {
-  background-color: #FFEB3B;
-  border: 2px solid #D28100;
-  border-radius: 5px;
-} */
-
 .newletter-text {
   color: #565C66;
   margin: 0;
@@ -1073,7 +1067,6 @@ body {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  color: #B9B9B9;
   padding-left: 16px;
 }
 
@@ -1647,6 +1640,11 @@ body {
   border-color: #FCFCFC;
 }
 
+.control:active .control-mark,
+.control:focus .control-mark {
+  outline: 2px solid #2D3440;
+}
+
 .control-input:disabled + .control-mark {
   border-color: rgba(36, 36, 36, 0.4);
 }
@@ -1936,6 +1934,16 @@ body {
   display: block;
 }
 
+.popup-search input:hover {
+  border-color: #2D3440;
+}
+
+.popup-search input:disabled {
+  background: #E7E7E7;
+  border-color: #B9B9B9;
+  color: rgba(45, 52, 64, 0.65);
+}
+
 /* Navigation-Link-Current */
 
 .navigation-user a:not(.navigation-phone).navigation-link-current {
@@ -2042,20 +2050,6 @@ body {
   border-radius: 4px;
 }
 
-.auth-form .field:hover {
-  border: 1px solid #2D3440;
-}
-
-.auth-form .field:disabled {
-  background: #E7E7E7;
-  color: rgba(45, 52, 64, 0.65);
-  border-color: #B9B9B9;
-}
-
-input[disabled]:hover {
-  color: rgba(45, 52, 64, 0);
-}
-
 .field-group textarea {
   min-height: 149px;
 }
@@ -2066,6 +2060,8 @@ input[disabled]:hover {
   display: block;
 }
 
+/* Состояния для форм */
+
 .input {
   border: 1px solid #B9B9B9;
   border-radius: 4px;
@@ -2073,4 +2069,22 @@ input[disabled]:hover {
 
 .input:hover {
   border-color: #2D3440;
+}
+
+.input:focus {
+  outline: 2px solid #2D3440;
+}
+
+.input:disabled {
+  background: #E7E7E7;
+  color: rgba(45, 52, 64, 0.65);
+  border-color: #B9B9B9;
+}
+
+.input:invalid {
+  border-color: #EA5454;
+}
+
+.input:invalid:hover {
+  outline: 2px solid #EA5454;
 }
