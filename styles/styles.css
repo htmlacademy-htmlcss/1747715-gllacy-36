@@ -146,7 +146,6 @@ body {
   position: absolute;
   width: 16px;
   height: 16px;
-  opacity: 0.24;
   border: 2px solid rgba(24, 24, 24, 0.24);
   border-top: 2px solid rgba(24, 24, 24, 1);
   border-radius: 50%;
@@ -175,7 +174,6 @@ body {
   width: 16px;
   height: 16px;
   right: 25px;
-  opacity: 0.24;
   border: 2px solid rgba(252, 252, 252, 0.25);
   border-top: 2px solid #FCFCFC;
   border-radius: 50%;
@@ -1632,6 +1630,7 @@ body {
 }
 
 /* Mark */
+
 .control-mark {
   position: absolute;
   left: 0;
@@ -1641,6 +1640,7 @@ body {
   height: 16px;
   border: 1px solid #242424;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .control:hover .control-mark {
@@ -1666,6 +1666,51 @@ body {
 .control-input[type="radio"]:checked:hover + .control-mark::before {
   background-color: #FCFCFC;
 }
+
+.control-mark-dedicated-checkbox {
+  display: none;
+}
+
+.catalog-filter-list-filler .control-mark {
+  border-radius: 2px;
+}
+
+.control-input[type="checkbox"]:checked .control-mark-dedicated-checkbox {
+  display: block;
+}
+
+/* Select */
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  margin-right: auto;
+}
+
+/* Control */
+
+.select-control {
+  padding: 10px 17px;
+  padding-right: 48px;
+  font: inherit;
+  background-image: url("../images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+  appearance: none;
+  cursor: pointer;
+}
+
+.select-control:hover,
+.select-control:focus {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.select-control:focus {
+  outline: 2px solid #FCFCFC;
+}
+
 
 /* Popover */
 
@@ -1754,7 +1799,6 @@ body {
 
 .button-checkout-popover-cart {
   cursor: pointer;
-
 }
 
 .popover-cart-summary {
@@ -1777,7 +1821,7 @@ body {
   border-radius: 4px;
   padding: 48px 0;
   margin-top: 8px;
-  right: 0px;
+  right: 0;
   display: none;
 }
 
