@@ -1895,6 +1895,18 @@ body {
   display: block;
 }
 
+.popup-login-links-wrapper .popup-login-link:hover,
+.popup-login-links-wrapper .popup-login-link:active {
+  font-weight: 700;
+  background: transparent;
+}
+
+.popup-login-links-wrapper .popup-login-link:focus {
+  font-weight: 700;
+  outline: none;
+  background: transparent;
+}
+
 /* Popup Search */
 
 .popup-search {
@@ -2052,4 +2064,13 @@ input[disabled]:hover {
   margin-top: 28px;
   margin-left: auto;
   display: block;
+}
+
+.input {
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+}
+
+.input:hover {
+  border-color: #2D3440;
 }
