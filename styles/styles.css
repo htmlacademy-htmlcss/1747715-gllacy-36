@@ -1103,7 +1103,6 @@ body {
 }
 
 .delivery-form-address {
-  /*   margin-top: 20px; */
   grid-column: 1/3;
   grid-row: 3/4;
 }
@@ -1119,23 +1118,89 @@ body {
   margin-top: 8px;
 }
 
-.delivery-form-container label:after {
-  content: url(../images/Info.svg);
-  padding-left: 4px;
-}
-
 .delivery-form-phone label::after {
   content: none;
 }
 
 .delivery-form-button {
-  /*   margin: 0;
-  margin-top: 32px;
-  text-align: center; */
   grid-row: 5/6;
   justify-self: center;
   grid-column: 1/3;
   margin: 0;
+}
+
+/* Tooltip */
+
+.tooltip {
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 4px;
+  width: 14px;
+  height: 14px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  color: #242424;
+  display: block;
+}
+
+.tooltip-toggle:hover path {
+  fill: #FCFCFC;
+}
+
+.tooltip-toggle:hover svg {
+  background-color: #2D3440;
+  border-radius: 50%;
+}
+
+.tooltip-text {
+  background-color: #FFFFFF;
+  color: #565C66;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 10px 8px;
+  border: 1px solid #B9B9B9;
+  box-shadow: 0px 4px 8px rgba(194, 194, 194, 0.2);
+  display: block;
+  width: 169px;
+  position: absolute;
+  z-index: 2;
+  left: 22px;
+  top: -11px;
+  display: none;
+}
+
+.tooltip-text:before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgb(185, 185, 185);
+  transform: rotate(-45deg);
+  position: absolute;
+  border-right: #B9B9B9;
+  border-bottom: #B9B9B9;
+  top: 11px;
+  left: -5px;
+  z-index: 3;
+  background-color: #ffffff;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
 
 /* Стили для contacts */
