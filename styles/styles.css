@@ -985,6 +985,7 @@ body {
   background-color: #FFFFFF;
   padding: 26px;
   margin: 6px;
+  padding-bottom: 18px;
 }
 
 .newsletter-form {
@@ -1696,7 +1697,7 @@ body {
   border-radius: 50%;
   width: 16px;
   height: 16px;
-  border: 1px solid #242424;
+  border: 2px solid #242424;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -1730,6 +1731,10 @@ body {
   background-color: #FCFCFC;
 }
 
+.control-input[type="radio"]:checked:disabled + .control-mark::before {
+  opacity: 0.4; /* не работает */
+}
+
 .control-mark-dedicated-checkbox {
   display: none;
 }
@@ -1746,8 +1751,16 @@ body {
   border: none;
 }
 
-.control-input[type="checkbox"]:checked:hover +  .control-mark path {
+.control-input[type="checkbox"]:checked:hover:not(:disabled) +  .control-mark path {
   fill: #FCFCFC;
+}
+
+.control-input[type="checkbox"]:disabled +  .control-mark {
+  opacity: 0.5;
+}
+
+.control-input[type="checkbox"]:checked:disabled +  .control-mark {
+  opacity: 0.5;
 }
 
 /* Select */
