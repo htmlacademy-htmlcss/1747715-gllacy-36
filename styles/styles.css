@@ -1194,7 +1194,7 @@ body {
   border-bottom: #B9B9B9;
   top: 11px;
   left: -5px;
-  z-index: 3;
+  z-index: 2;
   background-color: #ffffff;
 }
 
@@ -1738,8 +1738,16 @@ body {
   border-radius: 2px;
 }
 
-.control-input[type="checkbox"]:checked .control-mark-dedicated-checkbox {
+.control-input[type="checkbox"]:checked +  .control-mark .control-mark-dedicated-checkbox {
   display: block;
+}
+
+.control-input[type="checkbox"]:checked +  .control-mark {
+  border: none;
+}
+
+.control-input[type="checkbox"]:checked:hover +  .control-mark path {
+  fill: #FCFCFC;
 }
 
 /* Select */
