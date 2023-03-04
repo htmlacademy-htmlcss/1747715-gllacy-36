@@ -51,7 +51,7 @@ body {
 }
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -194,8 +194,8 @@ body {
 /* Стили для header */
 
 .navigation {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -215,6 +215,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.navigation-user {
+  justify-self: end;
 }
 
 .navigation-first-header-list {
@@ -322,7 +326,7 @@ body {
   min-width: 103px;
   padding: 8px 0;
   margin-top: 8px;
-  box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 4px;
 }
 
@@ -1173,7 +1177,7 @@ body {
   text-transform: none;
   padding: 10px 8px;
   border: 1px solid #B9B9B9;
-  box-shadow: 0px 4px 8px rgba(194, 194, 194, 0.2);
+  box-shadow: 0 4px 8px rgba(194, 194, 194, 0.2);
   display: block;
   width: 169px;
   position: absolute;
@@ -1418,7 +1422,7 @@ body {
 
 .catalog-filter {
   margin-top: 37px;
-  width: 900px;
+  max-width: 900px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -1801,12 +1805,12 @@ body {
   position: absolute;
   z-index: 1;
   box-sizing: border-box;
-  filter: drop-shadow(0px 15px 40px rgba(45, 52, 64, 0.12));
+  filter: drop-shadow(0 15px 40px rgba(45, 52, 64, 0.12));
   background: #FCFCFC;
   border-radius: 4px;
   padding: 48px;
   margin-top: 8px;
-  right: 0px;
+  right: 0;
   display: none;
 }
 
@@ -1899,7 +1903,7 @@ body {
   box-sizing: border-box;
   min-width: 288px;
   min-height: 60px;
-  filter: drop-shadow(0px 15px 40px rgba(45, 52, 64, 0.12));
+  filter: drop-shadow(0 15px 40px rgba(45, 52, 64, 0.12));
   background: #FCFCFC;
   border-radius: 4px;
   padding: 48px 0;
@@ -1925,7 +1929,7 @@ body {
   box-sizing: border-box;
   background: #FCFCFC;
   border-radius: 4px;
-  filter: drop-shadow(0px 15px 40px rgba(45, 52, 64, 0.12));
+  filter: drop-shadow(0 15px 40px rgba(45, 52, 64, 0.12));
   margin-top: 8px;
   right: 0;
   padding: 48px 48px 52px;
@@ -2000,7 +2004,7 @@ body {
   margin-top: 8px;
   background: #FCFCFC;
   border-radius: 4px;
-  filter: drop-shadow(0px 8px 16px rgba(45, 52, 64, 0.12));
+  filter: drop-shadow(0 8px 16px rgba(45, 52, 64, 0.12));
   padding: 24px 16px;
   display: none;
 }
@@ -2091,8 +2095,8 @@ body {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   width: 84px;
   height: 84px;
   background-color: #ffffff;
