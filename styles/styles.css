@@ -1444,6 +1444,7 @@ body {
 
 .catalog-filter-list-filler {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   padding: 10px 24px 10px 26px;
 }
