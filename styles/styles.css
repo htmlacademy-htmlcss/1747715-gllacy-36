@@ -492,6 +492,7 @@ body {
   margin: 0;
   margin-bottom: 24px;
   margin-top: 113px;
+  word-break: break-all;
 }
 
 .gallery-text {
@@ -802,6 +803,7 @@ body {
   max-width: 190px;
   margin: 0 auto;
   margin-top: 8px;
+  word-break: break-all;
 }
 
 .catalog-item-price {
@@ -904,19 +906,19 @@ body {
   gap: 16px;
 }
 
-.advantages-item:first-child::before {
+.advantages-item:nth-child(1n)::before {
   content: url(../images/list-style-icecream.svg);
 }
 
-.advantages-item:nth-child(2)::before {
+.advantages-item:nth-child(2n)::before {
   content: url(../images/list-style-cow.svg);
 }
 
-.advantages-item:nth-child(3)::before {
+.advantages-item:nth-child(3n)::before {
   content: url(../images/list-style-leaf.svg);
 }
 
-.advantages-item:nth-child(4)::before {
+.advantages-item:nth-child(4n)::before {
   content: url(../images/list-style-thermometer.svg);
 }
 
@@ -924,6 +926,7 @@ body {
 
 .aside-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 80px;
 }
@@ -935,7 +938,7 @@ body {
   background-repeat: no-repeat;
   border-radius: 16px;
   padding: 32px 0 0 32px;
-  flex-basis: 570px;
+  flex-basis: 537px;
   flex-grow: 0;
   min-height: 192px;
 }
@@ -1305,17 +1308,17 @@ body {
   padding-top: 48px;
 }
 
+.page-footer-info {
+  margin-left: 15px;
+}
+
 .footer-info-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  min-width: 356px;
-  height: 60px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 150px 1fr;
   row-gap: 6px;
-  margin-left: 41px;
   line-height: 20px;
 }
 
