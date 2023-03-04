@@ -1317,7 +1317,8 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 140px 1fr;
+  column-gap: 10px;
   row-gap: 6px;
   line-height: 20px;
 }
