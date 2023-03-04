@@ -866,17 +866,14 @@ body {
   background-size: 20%;
   border-radius: 16px;
   margin-top: 80px;
-  min-height: 480px;
+  padding: 24px;
 }
 
 .advantages-wrapper {
   background: #FFFFFF;
   border-radius: 16px;
-  position: relative;
-  top: 24px;
-  padding-bottom: 56px;
-  width: 1122px;
-  margin: 0 auto;
+  max-width: 1122px;
+  padding: 56px 0;
 }
 
 .advantages-title {
@@ -885,7 +882,6 @@ body {
   line-height: 46px;
   text-align: center;
   margin: 0;
-  padding-top: 56px;
 }
 
 .advantages-list {
