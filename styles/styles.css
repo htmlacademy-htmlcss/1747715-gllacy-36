@@ -37,6 +37,14 @@ body {
   background: #FEAFC3;
 }
 
+.body-blue {
+  background: #69A9FF;
+}
+
+.body-yellow {
+  background: #FCC850;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -456,8 +464,7 @@ body {
   padding-top: 21px;
 }
 
-.slider-gallery-item:nth-child(2),
-.slider-gallery-item:nth-child(3) {
+.slider-gallery-item-non-active {
   width: 100px;
   padding-left: 0;
 }
@@ -466,8 +473,7 @@ body {
   margin-left: 41px;
 }
 
-.slider-gallery-item:nth-child(2) .slider-gallery-container,
-.slider-gallery-item:nth-child(3) .slider-gallery-container {
+.slider-gallery-item-non-active .slider-gallery-container {
   display: none;
 }
 
@@ -485,6 +491,44 @@ body {
 .slider-gallery-item-non-active .slider-gallery-button {
   opacity: 0;
   cursor: default;
+}
+
+.slider-gallery-item-active {
+  order: -2;
+}
+
+.slider-gallery-item:nth-child(2).slider-gallery-item-active .slider-wrapper,
+.slider-gallery-item:nth-child(3).slider-gallery-item-active .slider-wrapper {
+  width: 352px;
+  margin-left: 41px;
+}
+
+.slider-gallery-item:nth-child(2).slider-gallery-item-active .slider-wrapper-decoration,
+.slider-gallery-item:nth-child(3).slider-gallery-item-active .slider-wrapper-decoration {
+  width: 312px;
+}
+
+.slider-gallery-item:nth-child(3).slider-gallery-item-non-active {
+  order: -1;
+  margin-left: 0;
+  margin-right: 41px;
+}
+
+.slider-gallery-item:nth-child(3).slider-gallery-item-active {
+  margin-left: 0;
+}
+
+.slider-gallery-item:nth-child(3).slider-gallery-item-active .slider-gallery-container {
+  width: 432px;
+}
+
+.slider-gallery-item:nth-child(1).slider-gallery-item-non-active {
+  margin-right: 41px;
+}
+
+.slider-gallery-item:nth-child(1).slider-gallery-item-active + .slider-gallery-item {
+  order: -1;
+  margin-right: 41px;
 }
 
 .gallery-subtitle {
@@ -2077,7 +2121,7 @@ body {
 
 /* Модальное окно */
 
-.modal-container-close {
+.modal-container.modal-container-close {
   display: none;
 }
 
@@ -2089,7 +2133,6 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(45, 52, 64, 0.3);
-  display: none;
 }
 
 .modal {
@@ -2106,10 +2149,10 @@ body {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 0;
-  right: 0;
-  width: 84px;
-  height: 84px;
+  width: 42px;
+  height: 42px;
+  top: 21px;
+  right: 21px;
   background-color: #ffffff;
   border: none;
   background-image: url("../images/close.svg");
@@ -2187,4 +2230,8 @@ body {
 
 .input:invalid:hover {
   outline: 2px solid #EA5454;
+}
+
+.input:required:invalid:not(:placeholder-shown) {
+  border: 1px solid #B9B9B9;
 }
