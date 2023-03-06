@@ -62,6 +62,7 @@ body {
   line-height: inherit;
   font-weight: 700;
   cursor: pointer;
+  transition: 0.8s;
 }
 
 .button-white {
@@ -285,6 +286,7 @@ body {
 .navigation-item .navigation-phone {
   font-size: inherit;
   font-weight: 700;
+  transition: 0.8s;
 }
 
 .navigation-phone:hover {
@@ -522,6 +524,7 @@ body {
   justify-content: center;
   grid-area: 1/-1/1/2;
   align-self: center;
+  transition: 0.8s;
 }
 
 .slider-gallery-button:nth-of-type(2) {
@@ -623,6 +626,10 @@ body {
 .social-link:active::before,
 .social-link:focus::before {
   opacity: 1;
+  transition: 0.8s;
+}
+
+.social-link:hover {
   transition: 0.8s;
 }
 
@@ -1007,7 +1014,6 @@ body {
   font-family: inherit;
   font-size: inherit;
   line-height: 20px;
-  color: #B9B9B9;
 }
 
 .newletter-text {
@@ -1324,6 +1330,7 @@ body {
   color: inherit;
   font-size: 14px;
   line-height: 20px;
+  transition: 0.8s;
 }
 
 .footer-info-link:hover {
@@ -1354,6 +1361,7 @@ body {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid black;
+  transition: 0.8s;
 }
 
 .htmlacademy-link:hover {
@@ -1531,7 +1539,8 @@ body {
 }
 
 .pagination-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 57% 1fr;
   margin-top: 16px;
   min-height: 126px;
   align-items: center;
@@ -1573,7 +1582,7 @@ body {
 }
 
 .pagination-show-more {
-  margin-left: 487px;
+  justify-self: end;
 }
 
 .catalog-page-footer-container {
@@ -1736,7 +1745,8 @@ body {
 }
 
 .control-input[type="radio"]:checked:disabled + .control-mark::before {
-  opacity: 0.4; /* не работает */
+  opacity: 0.4;
+  /* не работает */
 }
 
 .control-mark-dedicated-checkbox {
@@ -1747,23 +1757,23 @@ body {
   border-radius: 2px;
 }
 
-.control-input[type="checkbox"]:checked +  .control-mark .control-mark-dedicated-checkbox {
+.control-input[type="checkbox"]:checked + .control-mark .control-mark-dedicated-checkbox {
   display: block;
 }
 
-.control-input[type="checkbox"]:checked +  .control-mark {
+.control-input[type="checkbox"]:checked + .control-mark {
   border: none;
 }
 
-.control-input[type="checkbox"]:checked:hover:not(:disabled) +  .control-mark path {
+.control-input[type="checkbox"]:checked:hover:not(:disabled) + .control-mark path {
   fill: #FCFCFC;
 }
 
-.control-input[type="checkbox"]:disabled +  .control-mark {
+.control-input[type="checkbox"]:disabled + .control-mark {
   opacity: 0.5;
 }
 
-.control-input[type="checkbox"]:checked:disabled +  .control-mark {
+.control-input[type="checkbox"]:checked:disabled + .control-mark {
   opacity: 0.5;
 }
 
