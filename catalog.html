@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
 
   <body>
@@ -81,8 +83,8 @@
             <div class="popup-login">
               <h2 class="popup-login-title">Личный кабинет</h2>
               <form action="https://echo.htmlacademy.ru/" method="get">
-                <input class="input" type="email" name="email" id="email" placeholder="email@example.com">
-                <input class="input" type="password" name="password" id="password" value="password" maxlength="6">
+                <input class="input" type="email" name="email" id="email" placeholder="email@example.com" required>
+                <input class="input" type="password" name="password" id="password" value="password" maxlength="6" required>
                 <div class="popup-login-button-and-links-wrapper">
                   <button class="button button-pink" type="submit">Войти</button>
                   <div class="popup-login-links-wrapper">
@@ -177,28 +179,32 @@
               <ul class="catalog-filter-list translucent-field catalog-filter-list-fat">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="fat-content" value="zero-fat-content">
+                    <input class="control-input visually-hidden" type="radio" name="fat-content"
+                      value="zero-fat-content">
                     <span class="control-mark"></span>
                     <span class="control-label">0%</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="fat-content" value="ten-fat-content" checked>
+                    <input class="control-input visually-hidden" type="radio" name="fat-content" value="ten-fat-content"
+                      checked>
                     <span class="control-mark"></span>
                     <span class="control-label">до 10%</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="fat-content" value="up-to-thirty-fat-content">
+                    <input class="control-input visually-hidden" type="radio" name="fat-content"
+                      value="up-to-thirty-fat-content">
                     <span class="control-mark"></span>
                     <span class="control-label">до 30%</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input visually-hidden" type="radio" name="fat-content" value="over-thirty-fat-content">
+                    <input class="control-input visually-hidden" type="radio" name="fat-content"
+                      value="over-thirty-fat-content">
                     <span class="control-mark"></span>
                     <span class="control-label">выше 30%</span>
                   </label>
@@ -211,37 +217,73 @@
               <ul class="catalog-filter-list translucent-field catalog-filter-list-filler">
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="chocolate" checked>
-
-                    шоколадные
+                    <input class="visually-hidden control-input" type="checkbox" name="chocolate" checked>
+                    <span class="control-mark control-mark-filler">
+                      <svg class="control-mark-dedicated-checkbox" aria-hidden="true" focusable="false" width="16" height="16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 1 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="control-label">шоколадные</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="sugar-sprinkles" checked>
-
-                    сахарные посыпки
+                    <input class="visually-hidden control-input" type="checkbox" name="sugar-sprinkles"
+                      checked>
+                    <span class="control-mark control-mark-filler">
+                      <svg class="control-mark-dedicated-checkbox" aria-hidden="true" focusable="false" width="16" height="16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 1 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="control-label">сахарные посыпки</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="fruit">
-
-                    фрукты
+                    <input class="visually-hidden control-input" type="checkbox" name="fruit">
+                    <span class="control-mark control-mark-filler">
+                      <svg class="control-mark-dedicated-checkbox" aria-hidden="true" focusable="false" width="16" height="16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 1 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="control-label">фрукты</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="syrups">
-
-                    сиропы
+                    <input class="visually-hidden control-input" type="checkbox" name="syrups">
+                    <span class="control-mark control-mark-filler">
+                      <svg class="control-mark-dedicated-checkbox" aria-hidden="true" focusable="false" width="16" height="16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 1 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="control-label">сиропы</span>
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
-                    <input class="control-input" type="checkbox" name="jams">
-
-                    джемы
+                    <input class="visually-hidden control-input" type="checkbox" name="jams">
+                    <span class="control-mark control-mark-filler">
+                      <svg class="control-mark-dedicated-checkbox" aria-hidden="true" focusable="false" width="16" height="16"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 1 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z"
+                          fill="currentColor" />
+                      </svg>
+                    </span>
+                    <span class="control-label">джемы</span>
                   </label>
                 </li>
 
@@ -251,54 +293,6 @@
             <button class="button button-transparent catalog-filter-button" type="submit">Применить</button>
           </form>
         </section>
-
-        <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-title">Производители</legend>
-          <ul class="catalog-filter-list">
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="bed-head-for-men" checked>
-                <span class="control-mark"></span>
-                <span class="control-label">Bed Head for Men</span>
-              </label>
-            </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="homme-deep-cleansing-cool">
-                <span class="control-mark"></span>
-                <span class="control-label">Homme Deep Cleansing Cool</span>
-              </label>
-            </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="so-intense">
-                <span class="control-mark"></span>
-                <span class="control-label">So Intense</span>
-              </label>
-            </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="sprekenhus">
-                <span class="control-mark"></span>
-                <span class="control-label">Sprekenhus</span>
-              </label>
-            </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="firm-storе">
-                <span class="control-mark"></span>
-                <span class="control-label">Firm Storе</span>
-              </label>
-            </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="visually-hidden control-input" type="checkbox" name="winter-body">
-                <span class="control-mark"></span>
-                <span class="control-label">Winter Body</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
 
         <section class="catalog page-catalog">
           <h2 class="catalog-title visually-hidden">Каталог сливочного мороженого.</h2>
@@ -595,8 +589,8 @@
           <h2 class="page-footer-title visually-hidden">Для поставщиков</h2>
           <ul class="footer-info-list">
             <li class="footer-info-item"><a class="footer-info-link" href="#">Для поставщиков</a></li>
-            <li class="footer-info-item"><a class="footer-info-link" href="#">О производстве</a></li>
             <li class="footer-info-item"><a class="footer-info-link" href="#">Наши документы</a></li>
+            <li class="footer-info-item"><a class="footer-info-link" href="#">О производстве</a></li>
             <li class="footer-info-item"><a class="footer-info-link" href="#">Экологические стандарты</a></li>
           </ul>
         </div>
