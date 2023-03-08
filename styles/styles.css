@@ -2237,3 +2237,13 @@ body {
 .input:invalid:not(:placeholder-shown):hover {
   outline: 2px solid #EA5454;
 }
+
+/* Если не получается инвалидировать input - повесить на input класс .error */
+
+.input.error:not(:placeholder-shown) {
+  border-color: #EA5454;
+}
+
+.input.error:not(:placeholder-shown):hover {
+  outline: 2px solid #EA5454;
+}
