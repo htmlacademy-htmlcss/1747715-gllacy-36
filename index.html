@@ -72,6 +72,7 @@
             <div class="popup-search">
               <span class="visually-hidden">Поиск по сайту.</span>
               <form action="https://echo.htmlacademy.ru/" method="get">
+                <label class="visually-hidden" for="search">Поиск по сайту</label>
                 <input type="search" name="search" id="search" placeholder="Поиск по сайту">
               </form>
             </div>
@@ -88,7 +89,9 @@
             <div class="popup-login">
               <h2 class="popup-login-title">Личный кабинет</h2>
               <form action="https://echo.htmlacademy.ru/" method="get">
+                <label for="email" class="visually-hidden">Введите вашу электронную почту</label>
                 <input class="input" type="email" name="email" id="email" placeholder="email@example.com" required>
+                <label for="password" class="visually-hidden">Введите пароль</label>
                 <input class="input" type="password" name="password" id="password" value="123456" maxlength="6"
                   required>
                 <div class="popup-login-button-and-links-wrapper">
@@ -450,7 +453,8 @@
                 ерунды.
                 Честно =)</p>
               <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-                <input class="input" type="email" name="email" placeholder="email@example.com" required>
+                <label for="email-newsletter" class="visually-hidden">Введите вашу электронную почту</label>
+                <input class="input" type="email" name="email" id="email-newsletter" placeholder="email@example.com" required>
                 <button class="button button-pink" type="submit">Отправить</button>
               </form>
             </div>
@@ -498,7 +502,8 @@
                   </span>
                 </span>
 
-                <input class="input" type="text" name="delivery-date" placeholder="01.04.2020" id="delivery-date"
+                <!-- Лейбл в спане с тултипом -->
+                <input class="input" type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020" id="delivery-date"
                   required>
               </p>
               <p class="delivery-form-phone delivery-form-inner">
@@ -506,7 +511,6 @@
                 <input class="input" type="tel" name="delivery-phone" placeholder="+7 800 999-00-00" id="delivery-phone"
                   required>
               </p>
-              <!-- </div> -->
 
               <p class="delivery-form-address delivery-form-inner">
 
@@ -532,6 +536,7 @@
                   </span>
                 </span>
 
+                <!-- Лейбл в спане с тултипом -->
                 <input class="input" type="text" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8"
                   id="delivery-address" required>
               </p>
