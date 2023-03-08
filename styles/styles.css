@@ -145,7 +145,6 @@ body {
 
 /* Spinner */
 
-
 .button-download {
   padding-right: 56px;
 }
@@ -1741,6 +1740,7 @@ body {
 }
 
 /* Control */
+
 .control {
   position: relative;
   display: block;
@@ -2096,11 +2096,13 @@ body {
 
 /* Navigation-Link-Current */
 
+.navigation-link-catalog.navigation-link-current,
 .navigation-user a:not(.navigation-phone).navigation-link-current {
   background: #FF4A78;
   color: #FCFCFC;
   border-radius: 30px;
   box-sizing: border-box;
+  outline: none;
 }
 
 .navigation-link-current path {
