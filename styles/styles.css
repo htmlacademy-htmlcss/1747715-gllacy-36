@@ -207,6 +207,7 @@ body {
   grid-template-columns: 1fr 1fr;
   margin-top: 24px;
   margin-bottom: 24px;
+  gap: 11px;
 }
 
 .page-header {
@@ -854,7 +855,6 @@ body {
   max-width: 190px;
   margin: 0 auto;
   margin-top: 8px;
-  word-break: break-all;
 }
 
 .catalog-item-price {
@@ -1367,6 +1367,7 @@ body {
   column-gap: 10px;
   row-gap: 6px;
   line-height: 20px;
+  margin-left: 12px;
 }
 
 .footer-info-link {
@@ -1550,6 +1551,7 @@ body {
   font-weight: 700;
   padding: 8px 52px;
   margin-bottom: 2px;
+  margin-left: 4px;
 }
 
 .button-transparent:hover {
@@ -1929,7 +1931,7 @@ body {
 .button-delete-product-popover-cart {
   width: 16px;
   height: 16px;
-  background-image: url(../images/Cross.svg);
+  background-image: url(../images/cross.svg);
   border: none;
   background-color: inherit;
   cursor: pointer;
