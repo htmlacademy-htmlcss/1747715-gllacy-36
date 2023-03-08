@@ -345,7 +345,7 @@ body {
   display: block;
 }
 
-.navigation-item:nth-child(2):focus-within .navigation-link-catalog svg {
+.navigation-item:nth-child(2):focus-within .catalog-arrow-image {
   transform: rotate(180deg) translateX(-6px) translateX(4px) translateY(-2px);
 }
 
@@ -878,8 +878,8 @@ body {
   transition: 0.8s;
 }
 
-.catalog-item .button:hover path,
-.catalog-item .button:active path {
+.catalog-item-button:hover path,
+.catalog-item-button:active path {
   fill: #2D3440;
 }
 
@@ -895,7 +895,7 @@ body {
   background: #B9B9B9;
 }
 
-.catalog-item .button:disabled path {
+.catalog-item-button:disabled path {
   fill: #565C66;
 }
 
