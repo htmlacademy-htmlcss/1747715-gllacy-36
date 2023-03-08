@@ -73,6 +73,8 @@ body {
   transition: 0.8s;
 }
 
+/* Добавить класс .button-download, чтобы посмотреть как работает кнопка со спиннером */
+
 .button-white {
   background: #FCFCFC;
   outline: 4px solid rgba(252, 252, 252, 0.4);
@@ -106,6 +108,7 @@ body {
   color: #B9B9B9;
 }
 
+/* Добавить класс .button-download-pink, чтобы посмотреть как работает кнопка со спиннером */
 
 .button-pink {
   border: none;
