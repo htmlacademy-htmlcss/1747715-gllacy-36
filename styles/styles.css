@@ -53,7 +53,8 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -206,10 +207,10 @@ body {
 
 .navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 700px 470px;
   margin-top: 24px;
   margin-bottom: 24px;
-  gap: 11px;
+
 }
 
 .page-header {
@@ -229,12 +230,17 @@ body {
   align-items: center;
 }
 
+.navigation-list-pages {
+  justify-self: start;
+}
+
 .navigation-user {
   justify-self: end;
 }
 
 .navigation-first-header-list {
   padding: 8px 16px;
+  padding-top: 1px;
 }
 
 .navigation-link-catalog {
@@ -436,7 +442,7 @@ body {
 
 /* Стили для gallery */
 .gallery {
-  margin-bottom: 76px;
+  margin-bottom: 74px;
 }
 
 .slider-gallery {
@@ -1040,11 +1046,11 @@ body {
   background-color: #FFFFFF;
   padding: 26px;
   margin: 6px;
-  padding-bottom: 18px;
+  padding-bottom: 30px;
 }
 
 .newsletter-form {
-  margin-top: 44px;
+  margin-top: 34px;
 }
 
 .newsletter-form input {
@@ -1369,7 +1375,8 @@ body {
   column-gap: 10px;
   row-gap: 6px;
   line-height: 20px;
-  margin-left: 12px;
+  margin-left: 2px;
+  margin-top: 2px;
 }
 
 .footer-info-link {
@@ -1417,10 +1424,14 @@ body {
   transition: 0.5s;
 }
 
+.page-footer-logo {
+  margin-top: 2px;
+}
+
 /* Стили для страницы Каталога */
 
 .inner-header {
-  padding-top: 30px;
+  padding-top: 26px;
 }
 
 .breadcrumbs {
@@ -1643,6 +1654,15 @@ body {
   padding: 2px 8px;
 }
 
+.catalog-page-footer-container .footer-info-list {
+  margin-top: -1px;
+  margin-left: 9px;
+}
+
+.catalog-page-footer-container .page-footer-logo {
+  margin-top: 0;
+}
+
 /* Range */
 
 .range {
@@ -1732,13 +1752,15 @@ body {
   text-align: center;
   background-color: transparent;
   border: none;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
   padding-left: 0;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1849,7 +1871,8 @@ body {
   background-image: url("../images/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 11px center;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   cursor: pointer;
 }
 
