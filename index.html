@@ -19,22 +19,24 @@
 
     <header class="page-header">
       <nav class="navigation container">
-        <ul class="navigation-list">
+        <ul class="navigation-list navigation-list-pages">
           <li class="navigation-item">
             <a class="navigation-link logo" href="index.html">
               <img src="images/logo.svg" alt="Логототип компании." width="137" height="56">
             </a>
           </li>
+          <!-- Чтобы сделать ссылку ярко-розового цвета повесить класс navigation-link-current -->
           <li class="navigation-item"><a class="navigation-link navigation-link-catalog navigation-first-header-list"
               href="#">Каталог
-              <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="catalog-arrow-image" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M3.80812 7.0532C3.54777 6.79285 3.12566 6.79285 2.86531 7.0532C2.60496 7.31355 2.60496 7.73566 2.86531 7.99601L7.52565 12.6564C7.52771 12.6585 7.52979 12.6606 7.53189 12.6627C7.66259 12.7934 7.83404 12.8585 8.00534 12.8579C8.1753 12.8574 8.34511 12.7924 8.47478 12.6627C8.47687 12.6606 8.47894 12.6585 8.48099 12.6564L13.1414 7.99601C13.4017 7.73566 13.4017 7.31355 13.1414 7.0532C12.881 6.79285 12.4589 6.79285 12.1986 7.0532L8.00334 11.2484L3.80812 7.0532Z"
                   fill="#2D3440" />
               </svg>
-
             </a>
+
             <ul class="drop-down-menu-list">
+              <!-- Чтобы сделать ссылку ярко-розового цвета повесить класс drop-down-menu-link-current -->
               <li class="drop-down-menu-item">
                 <a class="drop-down-menu-link drop-down-menu-link-new" href="#">Новинки</a>
               </li>
@@ -61,7 +63,10 @@
         <ul class="navigation-list navigation-user">
           <li class="navigation-item"><a class="navigation-link navigation-phone" href="tel:+78005558628">+7 800
               555-86-28</a></li>
-          <li class="navigation-item navigation-item-search"><a class="navigation-link" href="#"><svg aria-hidden="true"
+              <!-- Чтобы сделать ссылку ярко-розовой добавить ссылке класс navigation-link-current -->
+          <li class="navigation-item navigation-item-search">
+            <a class="navigation-link" href="#">
+              <svg aria-hidden="true"
                 focusable="false" class="navigation-search" width="16" height="17" viewBox="0 0 16 17" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -72,12 +77,16 @@
             <div class="popup-search">
               <span class="visually-hidden">Поиск по сайту.</span>
               <form action="https://echo.htmlacademy.ru/" method="get">
+                <label class="visually-hidden" for="search">Поиск по сайту</label>
                 <input type="search" name="search" id="search" placeholder="Поиск по сайту">
               </form>
             </div>
 
           </li>
-          <li class="navigation-item navigation-item-login"><a class="navigation-link" href="#"><svg aria-hidden="true"
+          <!-- Чтобы сделать ссылку ярко-розовой добавить ссылке класс navigation-link-current -->
+          <li class="navigation-item navigation-item-login">
+            <a class="navigation-link" href="#">
+              <svg aria-hidden="true"
                 focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -88,7 +97,9 @@
             <div class="popup-login">
               <h2 class="popup-login-title">Личный кабинет</h2>
               <form action="https://echo.htmlacademy.ru/" method="get">
+                <label for="email" class="visually-hidden">Введите вашу электронную почту</label>
                 <input class="input" type="email" name="email" id="email" placeholder="email@example.com" required>
+                <label for="password" class="visually-hidden">Введите пароль</label>
                 <input class="input" type="password" name="password" id="password" value="123456" maxlength="6"
                   required>
                 <div class="popup-login-button-and-links-wrapper">
@@ -102,8 +113,10 @@
             </div>
 
           </li>
-
-          <li class="navigation-item navigation-item-cart"><a class="navigation-link navigation-link-cart" href="#"><svg
+          <!-- Чтобы сделать ссылку ярко-розовой добавить ссылке класс navigation-link-current -->
+          <li class="navigation-item navigation-item-cart">
+            <a class="navigation-link navigation-link-cart" href="#">
+              <svg
                 aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -124,7 +137,7 @@
                       <span class="popover-cart-description">1 кг х 310 ₽</span>
                     </div>
                     <b class="popover-cart-item-price">310 ₽/кг</b>
-                    <button class="button-delete-product-popover-cart"></button>
+                    <button class="button-delete-product-popover-cart" type="button"><span class="visually-hidden">Удалить товар</span></button>
                   </li>
                   <li class="popover-cart-item">
                     <img src="images/bubble-gum-catalog-photo.jpg" alt="Мороженое бабл-гам." class="popover-cart-image"
@@ -134,11 +147,11 @@
                       <span class="popover-cart-description">1,5 кг х 320 ₽</span>
                     </div>
                     <b class="popover-cart-item-price">480 ₽/кг</b>
-                    <button class="button-delete-product-popover-cart"></button>
+                    <button class="button-delete-product-popover-cart" type="button"><span class="visually-hidden">Удалить товар</span></button>
                   </li>
                 </ul>
                 <div class="popover-cart-checkout-and-summary">
-                  <button class="button-pink button-checkout-popover-cart">Оформить заказ</button>
+                  <button class="button-pink button-checkout-popover-cart" type="button">Оформить заказ</button>
                   <span class="popover-cart-summary">Итого: 790 ₽</span>
                 </div>
               </div>
@@ -352,7 +365,8 @@
               <p class="catalog-item-text">Сливочное мороженое с малиновым джемом</p>
               <div class="price-and-cart-wrapper">
                 <b class="catalog-item-price">310 ₽/кг</b>
-                <a class="button" href="#"><span class="visually-hidden">В корзину.</span><svg aria-hidden="true"
+                <a class="button catalog-item-button" href="#"><span class="visually-hidden">В корзину.</span>
+                  <svg aria-hidden="true"
                     focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -368,7 +382,8 @@
               <p class="catalog-item-text">Фисташковый пломбир с кусочками шоколада</p>
               <div class="price-and-cart-wrapper">
                 <b class="catalog-item-price">340 ₽/кг</b>
-                <a class="button" href="#"><span class="visually-hidden">В корзину.</span><svg aria-hidden="true"
+                <a class="button catalog-item-button" href="#"><span class="visually-hidden">В корзину.</span>
+                  <svg aria-hidden="true"
                     focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -384,7 +399,8 @@
               <p class="catalog-item-text">Крем-брюле<br> с черничным джемом</p>
               <div class="price-and-cart-wrapper">
                 <b class="catalog-item-price">330 ₽/кг</b>
-                <a class="button" href="#"><span class="visually-hidden">В корзину.</span><svg aria-hidden="true"
+                <a class="button catalog-item-button" href="#"><span class="visually-hidden">В корзину.</span>
+                  <svg aria-hidden="true"
                     focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -400,7 +416,8 @@
               <p class="catalog-item-text">Ванильный пломбир<br> со сладкой посыпкой</p>
               <div class="price-and-cart-wrapper">
                 <b class="catalog-item-price">320 ₽/кг</b>
-                <a class="button" href="#"><span class="visually-hidden">В корзину.</span><svg aria-hidden="true"
+                <a class="button catalog-item-button" href="#"><span class="visually-hidden">В корзину.</span>
+                  <svg aria-hidden="true"
                     focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -450,7 +467,8 @@
                 ерунды.
                 Честно =)</p>
               <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-                <input class="input" type="email" name="email" placeholder="email@example.com" required>
+                <label for="email-newsletter" class="visually-hidden">Введите вашу электронную почту</label>
+                <input class="input" type="email" name="email" id="email-newsletter" placeholder="email@example.com" required>
                 <button class="button button-pink" type="submit">Отправить</button>
               </form>
             </div>
@@ -498,7 +516,8 @@
                   </span>
                 </span>
 
-                <input class="input" type="text" name="delivery-date" placeholder="01.04.2020" id="delivery-date"
+                <!-- Лейбл в спане с тултипом -->
+                <input class="input" type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020"
                   required>
               </p>
               <p class="delivery-form-phone delivery-form-inner">
@@ -506,7 +525,6 @@
                 <input class="input" type="tel" name="delivery-phone" placeholder="+7 800 999-00-00" id="delivery-phone"
                   required>
               </p>
-              <!-- </div> -->
 
               <p class="delivery-form-address delivery-form-inner">
 
@@ -532,6 +550,7 @@
                   </span>
                 </span>
 
+                <!-- Лейбл в спане с тултипом -->
                 <input class="input" type="text" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8"
                   id="delivery-address" required>
               </p>
@@ -628,7 +647,7 @@
     <!-- Чтобы сделать видимым модальное окно, убрать класс ".modal-container-close" -->
     <div class="modal-container modal-container-close">
       <div class="modal modal-auth ">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть окно.</span>
         </button>
         <section class="modal-content">
@@ -654,7 +673,6 @@
         </section>
       </div>
     </div>
-
   </body>
 
 </html>
